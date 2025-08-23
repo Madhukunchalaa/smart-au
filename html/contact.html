@@ -118,9 +118,9 @@
     <section class="section section-contact">
         <div class="container">
 
-            <p class="before-title text-center">Be in touch</p>
-            <h2 class="title-h2 text-center">Contact Info</h2>
-            <p class="text-center after-title">We tried to provide you with the most necessary information, so that it would be easier for you to contact us in any way convenient for you.</p>
+            <p class="before-title text-center">Get In Touch With Us</p>
+            <h2 class="title-h2 text-center">Let's Start Your Project Today</h2>
+            <p class="text-center after-title">Ready to transform your online presence? We're excited to learn about your project and help bring your digital vision to life. Connect with us and let's create something extraordinary that showcases your professional excellence.</p>
 
             <div class="row-contact">
             <div class="col-contact">
@@ -170,29 +170,76 @@
             <h2 class="title-h2 text-center">Send Us a Massage</h2>
             <p class="text-center after-title">We are always happy to talk with you. Be sure to write to us if you have any questions or need help and support.</p>
 
-            <form method="post" action="#" id="contact-form">
-                <div class="form">
-                    <div class="response"></div>
-                    <div class="form-item">
-                        <input class="form__input name" type="text" placeholder="First name">
-                    </div>
-                    <div class="form-item">
-                        <input class="form__input" type="text" placeholder="Last name">
-                    </div>
-                    <div class="form-item">
-                        <input class="form__input email" type="email" placeholder="Email address">
-                    </div>
-                    <div class="form-item">
-                        <input class="form__input" type="text" placeholder="Phone number">
-                    </div>
-                    <div class="form-item w-100">
-                        <textarea class="form__textarea" rows="3" placeholder="Enter your massage"></textarea>
-                    </div>
-                    <div class="form-item text-center">
-                        <button type="button" class="btn btn-primary" id="submit">Send</button>
-                    </div>
-                </div>
-            </form>
+           <form method="post" action="#" id="contact-form">
+  <div class="form">
+    <div class="response"></div>
+    
+    <!-- Full Name -->
+    <div class="form-item">
+      <input class="form__input" type="text" name="full_name" placeholder="Full Name *" required>
+    </div>
+    
+    <!-- Email -->
+    <div class="form-item">
+      <input class="form__input" type="email" name="email" placeholder="Email Address *" required>
+    </div>
+    
+    <!-- Phone -->
+    <div class="form-item">
+      <input class="form__input" type="tel" name="phone" placeholder="Phone Number">
+    </div>
+    
+    <!-- Company -->
+    <div class="form-item">
+      <input class="form__input" type="text" name="company" placeholder="Company / Organization">
+    </div>
+    
+    <!-- Project Type -->
+    <div class="form-item">
+      <select class="form__input" name="project_type" required>
+        <option value="" disabled selected>Project Type *</option>
+        <option value="new_website">New Website</option>
+        <option value="website_redesign">Website Redesign</option>
+        <option value="theme_customization">Theme Customization</option>
+        <option value="portfolio_website">Portfolio Website</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <!-- Project Budget -->
+    <div class="form-item">
+      <select class="form__input" name="budget" required>
+        <option value="" disabled selected>Project Budget *</option>
+        <option value="5k-10k">$5K – $10K</option>
+        <option value="10k-25k">$10K – $25K</option>
+        <option value="25k-50k">$25K – $50K</option>
+        <option value="50k+">$50K+</option>
+        <option value="discuss">Let's Discuss</option>
+      </select>
+    </div>
+    
+    <!-- Project Timeline -->
+    <div class="form-item">
+      <input class="form__input" type="text" name="timeline" placeholder="Project Timeline (When do you need it completed?)">
+    </div>
+    
+    <!-- Project Vision -->
+    <div class="form-item w-100">
+      <textarea class="form__textarea" name="vision" rows="4" placeholder="Tell us about your project vision *" required></textarea>
+    </div>
+    
+    <!-- How did you hear about us -->
+    <div class="form-item">
+      <input class="form__input" type="text" name="referral" placeholder="How did you hear about us? (Optional)">
+    </div>
+    
+    <!-- Submit -->
+    <div class="form-item text-center">
+      <button type="submit" class="btn btn-primary" id="submit">Send Message</button>
+    </div>
+  </div>
+</form>
+
         </div>
     </section>
 
@@ -222,7 +269,7 @@
                         <div class="col-xl-5 col-md-8 col-sm-8 col-12">
                             <h3 class="title-h3">About</h3>
                             <p>
-                                We’ve got a lot of awards for our work and develop applications that became popular in the world. We try not to miss important details in each area.
+                               We're a specialized web development studio dedicated to building exceptional digital experiences that help professionals and businesses establish commanding online presences and achieve their goals
                             </p>
                             <ul class="list-social">
                                 <li class="list-social-item"><a href="" target="_blank" class="list-social-link"><i class="zmdi zmdi-facebook"></i></a></li>
