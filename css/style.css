@@ -678,6 +678,11 @@ a:hover {
         width: 200px;
         height: 265px; } }
 
+.btn-play a{
+  color: #ff7062;
+  text-decoration: none;
+}
+
 .btn-play {
   font-size: 1.21rem;
   font-family: 'Nova Flat', cursive;
