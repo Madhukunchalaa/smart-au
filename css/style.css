@@ -683,6 +683,42 @@ a:hover {
   text-decoration: none;
 }
 
+
+
+#test{
+  background-image: url("img/home-banner-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .btn-play {
   font-size: 1.21rem;
   font-family: 'Nova Flat', cursive;
