@@ -1366,15 +1366,15 @@ a:hover {
 
 .case-item {
   width: 100%;
-  height: 400px;
+  min-height: 200px;
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
-  @media (max-width: 1730px) {
+  /* @media (max-width: 1730px) {
     .case-item {
-      height: 300px; } }
+      height: 300px; } } */
   @media (max-width: 767.98px) {
     .case-item {
       height: 250px; } }
@@ -1413,13 +1413,13 @@ a:hover {
     opacity: 1; }
 
 .case-1 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project1.png); }
 
 .case-2 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project2.png); }
 
 .case-3 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project3.png); }
 
 @media (max-width: 575.98px) {
   .row-case {
@@ -1572,7 +1572,7 @@ a:hover {
   background-color: #ff7062;
   color: #ffffff;
   font-family: 'Nova Flat', cursive;
-  font-size: 1.42rem;
+  font-size: 1.2rem;
   letter-spacing: 0.05rem;
   display: inline-block;
   padding: 0.5rem 1.6rem;
@@ -2018,6 +2018,7 @@ a:hover {
     padding: 0.5rem 1.42rem; }
   .nav-tabs-portfolio .nav-link.active {
     border-color: transparent;
+    font-size: 3rem;
     color: #ff7062;
     border-bottom: 2px solid #f54f5e; }
 
@@ -2060,15 +2061,15 @@ a:hover {
 
 .portfolio-thumb {
   width: 100%;
-  height: 423px;
+  min-height: 268px;
   overflow: hidden;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }
-  @media (max-width: 1730px) {
+  /* @media (max-width: 1730px) {
     .portfolio-thumb {
-      height: 350px; } }
+      height: 350px; } } */
   @media (max-width: 767.98px) {
     .portfolio-thumb {
       height: 250px; } }
@@ -2119,22 +2120,22 @@ a:hover {
     margin: 0; }
 
 .portfolio-thumb-1 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project7.png); }
 
 .portfolio-thumb-2 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project2.png); }
 
 .portfolio-thumb-3 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project3.png); }
 
 .portfolio-thumb-4 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project4.png); }
 
 .portfolio-thumb-5 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project5.png); }
 
 .portfolio-thumb-6 {
-  background-image: url(https://via.placeholder.com/360x423); }
+  background-image: url(/smart-au/img/project6.png); }
 
 /* Form */
 .section-form {
