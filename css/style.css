@@ -688,14 +688,15 @@ a:hover {
   font-family: 'Nova Flat', cursive;
   color: #ff7062;
   position: relative;
-  padding-left: 5.7rem;
   background-color: transparent;
   border: none;
   -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+ }
   .btn-play:hover {
     color: #222222;
-    cursor: pointer; }
+    cursor: pointer;
+   }
   .btn-play:before {
     content: '';
     background-image: url(img/play.svg);
@@ -706,7 +707,8 @@ a:hover {
     display: block;
     position: absolute;
     left: 0;
-    top: calc(50% - 30px); }
+    top: calc(50% - 30px);
+   }
 
 @media (max-width: 1199.98px) {
   .row-about .col-photo {
