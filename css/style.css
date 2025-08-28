@@ -1413,17 +1413,13 @@ a:hover {
     opacity: 1; }
 
 .case-1 {
-  background-image: url("../img/project1.png");
-}
+  background-image: url(/smart-au/img/project1.png); }
 
 .case-2 {
-  background-image: url("../img/project2.png");
-}
+  background-image: url(/smart-au/img/project2.png); }
 
 .case-3 {
-  background-image: url("../img/project3.png");
-}
-
+  background-image: url(/smart-au/img/project3.png); }
 
 @media (max-width: 575.98px) {
   .row-case {
@@ -2063,83 +2059,119 @@ a:hover {
   .box-portfolio .text-center {
     margin-top: 3.7rem; }
 
-.portfolio-thumb {
-  width: 100%;
-  min-height: 268px;
+    
+
+/* Card container */
+.portfolio-card {
+  display: block;
+  border-radius: 12px;
   overflow: hidden;
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
-  /* @media (max-width: 1730px) {
-    .portfolio-thumb {
-      height: 350px; } } */
-  @media (max-width: 767.98px) {
-    .portfolio-thumb {
-      height: 250px; } }
-  @media (max-width: 450px) {
-    .portfolio-thumb {
-      height: 300px; } }
-  .portfolio-thumb:hover {
-    background-color: #ff7062;
-    background-blend-mode: luminosity; }
-  .portfolio-thumb:hover::after {
-    opacity: 1; }
-  .portfolio-thumb__info {
-    position: absolute;
-    z-index: 1;
-    width: calc(100% - 30px);
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    color: #fff;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
-  .portfolio-thumb:hover .portfolio-thumb__info {
-    opacity: 1; }
-  .portfolio-thumb__name {
-    background-color: #ff7062;
-    color: #ffffff;
-    font-family: 'Nova Flat', cursive;
-    font-size: 1.42rem;
-    letter-spacing: 0.05rem;
-    display: inline-block;
-    padding: 0.5rem 1.6rem;
-    margin: 0; }
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-.portfolio-thumb-1 {
-  background-image: url(../img/project7.png); }
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-.portfolio-thumb-2 {
-  background-image: url(../img/project2.png); }
+/* Thumbnail (image area) */
+.portfolio-thumb {
+  width: 100%;                   /* ✅ full width */
+  min-height: 268px;             /* ✅ larger consistent height */
+  background-size: contain;
+  background-position: center;
+  position: relative;  
+  background-repeat: no-repeat;          /* ✅ important for overlay */
+  overflow: hidden;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.4s ease;
+}
 
-.portfolio-thumb-3 {
-  background-image: url(../img/project3.png); }
 
-.portfolio-thumb-4 {
-  background-image: url(../img/project4.png); }
 
-.portfolio-thumb-5 {
-  background-image: url(../img/project5.png); }
+/* Overlay */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;                     /* ✅ fills full height */
+     background-color: rgba(0, 0, 0, 0.3);
 
-.portfolio-thumb-6 {
-  background-image: url(../img/project6.png); }
+    transform: scale(1, 0);
+    transition: transform 500ms ease;
+    transform-origin: top center;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+      transform: scale(1, 1);
+    transform-origin: bottom center;
+}
+
+/* Overlay text */
+.portfolio-overlay__title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: 'Nova Flat', cursive;
+  background: rgba(0,0,0,0.4);
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card body (client name area) */
+.portfolio-card-body {
+  position: relative;   /* required for ::before positioning */
+  padding: 15px;
+  text-align: center;
+  background: #ff7062;
+  overflow: hidden;     /* hide animated background overflow */
+}
+
+.portfolio-client {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Nova Flat', cursive;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  position: relative;   /* ensures text is above ::before */
+  z-index: 1;
+}
+
+/* Background wipe layer */
+.portfolio-card-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #111111;
+  transform: scaleY(0);              /* start hidden */
+  transform-origin: left center;     /* wipe from left → right */
+  transition: transform 0.6s ease;   /* smooth animation */
+  z-index: 0;
+}
+
+/* On hover, animate only the pseudo-element */
+.portfolio-card:hover .portfolio-card-body::before {
+  transform: scaleY(1);
+}
+
+
+
+
+/* Background images */
+.portfolio-thumb-1 { background-image: url(/smart-au/img/ip2.jpg); }
+.portfolio-thumb-2 { background-image: url(/smart-au/img/project2.png); }
+.portfolio-thumb-3 { background-image: url(/smart-au/img/project3.png); }
+.portfolio-thumb-4 { background-image: url(/smart-au/img/project4.png); }
+.portfolio-thumb-5 { background-image: url(/smart-au/img/project5.png); }
+.portfolio-thumb-6 { background-image: url(/smart-au/img/project6.png); }
 
 /* Form */
 .section-form {
