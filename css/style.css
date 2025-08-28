@@ -3571,3 +3571,13 @@ a:hover {
   overflow: visible;
   background: #fff url("img/web-preloader.gif") no-repeat center center;
 }
+
+
+.card-box{
+  height: 200px;
+  width: 300px;
+  border: 1px solid #e2e2e2;
+  background-image: url('../img/ip2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
