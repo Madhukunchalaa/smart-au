@@ -1413,13 +1413,13 @@ a:hover {
     opacity: 1; }
 
 .case-1 {
-  background-image: url(/smart-au/img/project1.png); }
+  background-image: url(../img/project1.png); }
 
 .case-2 {
-  background-image: url(/smart-au/img/project2.png); }
+  background-image: url(../img/project2.png); }
 
 .case-3 {
-  background-image: url(/smart-au/img/project3.png); }
+  background-image: url(../img/project3.png); }
 
 @media (max-width: 575.98px) {
   .row-case {
@@ -2166,7 +2166,7 @@ a:hover {
 
 
 /* Background images */
-.portfolio-thumb-1 { background-image: url(/smart-au/img/ip2.jpg); }
+.portfolio-thumb-1 { background-image: url(../img/ip2.jpg); }
 .portfolio-thumb-2 { background-image: url(/smart-au/img/project2.png); }
 .portfolio-thumb-3 { background-image: url(/smart-au/img/project3.png); }
 .portfolio-thumb-4 { background-image: url(/smart-au/img/project4.png); }
