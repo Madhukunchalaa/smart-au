@@ -2186,16 +2186,7 @@ a:hover {
 
 /* Background images */
 .portfolio-thumb-1 {
-   background-image: url(../img/pm.jpg);
-   background-position: center;
-   background-size: contain;
-
-
-
-
-
-
-
+   background-image: url(../img/plant.png);
 }
 .portfolio-thumb-2 { background-image: url(../img/plant.png); }
 .portfolio-thumb-3 { background-image: url(../img/best.jpg); }
@@ -2300,7 +2291,7 @@ a:hover {
     border-right: 2px solid #f7f7f7;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transition: 0.3s;
+    -webkit-transition: 0.4s;
     transition: 0.3s; }
     .form__input:focus {
       border-right: 2px solid #ff7062; }
