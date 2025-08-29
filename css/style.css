@@ -525,6 +525,9 @@ a:hover {
   .banner-carousel .owl-next {
     background-image: url(../img/arrow.svg); }
 
+  #banner-no2{
+     bottom: -100px; 
+  }
 .carousel-number {
   font-family: 'Nova Flat', cursive;
   font-size: 17.85rem;
