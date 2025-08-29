@@ -1758,8 +1758,7 @@ a:hover {
 
 /* Blog */
 .section-blog {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem; }
+  padding-top: 3.5rem; }
   .section-blog--full {
     padding-top: 4.5rem;
     padding-bottom: 7.5rem; }
@@ -3177,8 +3176,7 @@ a:hover {
       background-blend-mode: luminosity; }
 
 .section-feedback {
-  padding-top: 9.8rem;
-  padding-bottom: 9.85rem; }
+  padding-bottom: 3.85rem; }
 
 .feedback-carousel {
   margin-top: 5.8rem;}
