@@ -2382,7 +2382,7 @@ a:hover {
 
 .list-decoration {
   list-style-type: none;
-  margin: 0;
+  margin-top: 20px;
   padding-left: 0; }
   .list-decoration-item {
     margin-bottom: 0.71rem; }
