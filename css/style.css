@@ -606,8 +606,7 @@ a:hover {
     margin-bottom: 1.5rem; }
   .section-about .description {
     font-size: 1.21rem;
-    line-height: 1.8;
-    margin-bottom: 4rem; }
+    line-height: 1.8;}
   .section-about .text-description {
     font-size: 1.21rem;
     line-height: 1.8;
@@ -3086,12 +3085,14 @@ a:hover {
   .feedback-carousel__text {
     font-size: 1.21rem;
     line-height: 1.8;
+    margin-right: 23px;
     position: relative;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+ }
     .feedback-carousel__text::after {
       content: '';
       display: block;
-      width: 45%;
+      width: 50%;
       height: 1px;
       background-color: #e2e2e2;
       margin-top: 1rem; }
