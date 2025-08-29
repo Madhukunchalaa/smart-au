@@ -878,18 +878,22 @@ a:hover {
 /* Action */
 .section-action {
   background-color: #f7f7f7;
-  background-image: url(img/map/map-bg.svg);
+  background-image: url(../img/lets-connect-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 7.9rem;
-  padding-bottom: 8rem;
+  padding-top: 3.9rem;
+  padding-bottom: 4rem;
   position: relative; }
   @media (max-width: 575.98px) {
     .section-action {
       text-align: center; } }
   .section-action .title-h2 {
-    margin-bottom: 3rem; }
+    color: white;
+   }
+   #lets-connect{
+    color: white;
+   }
   @media (max-width: 767.98px) {
     .section-action {
       padding-top: 5.9rem;
@@ -937,8 +941,8 @@ a:hover {
 
 /* Services */
 .section-services {
-  padding-top: 9.5rem;
-  padding-bottom: 9.5rem; }
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem; }
   .section-services .after-title {
     max-width: 529px;
     margin: 29px auto 0; }
@@ -1332,7 +1336,7 @@ a:hover {
   position: relative;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  margin-bottom: 9.5rem; }
+  }
 
 .portfolio .title-h2 {
   margin-bottom: 2rem; }
@@ -1440,7 +1444,7 @@ a:hover {
 
 /* Team */
 .section-team {
-  padding-top: 9.7rem;
+  padding-top: 3.7rem;
   padding-bottom: 5rem; }
   .section-team .title-h2 {
     margin-bottom: 2.07rem; }
