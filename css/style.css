@@ -2139,8 +2139,8 @@ a:hover {
   text-align: center;
   /* background: #ff7062; */
   overflow: hidden;     /* hide animated background overflow */
-  opacity: 0;           /* hide before hover */
-  transform: translateY(20px); /* slide down from above */
+  opacity: 1;           /* visible before hover */
+  transform: none;      /* normal position */
   transition: opacity 0.4s ease, transform 0.4s ease; /* smooth transition */
 }
 
@@ -2162,7 +2162,7 @@ a:hover {
   position: absolute;
   inset: 0;
   background: #ff7062;
-  transform: scaleY(0);              /* start hidden */
+  transform: scaleY(1);              /* visible before hover */
   transform-origin: left center;     /* wipe from left → right */
   transition: transform 0.6s ease;   /* smooth animation */
   z-index: 0;
@@ -2171,6 +2171,7 @@ a:hover {
 /* On hover, animate only the pseudo-element */
 .portfolio-card:hover .portfolio-card-body::before {
   transform: scaleY(1);
+  background: #000; /* change background to black on hover */
 }
 
 /* On hover, show the card body */
@@ -2183,14 +2184,50 @@ a:hover {
 
 
 /* Background images */
-.portfolio-thumb-1 { background-image: url(../img/portfo-img.jpg); }
-.portfolio-thumb-2 { background-image: url(../img/best.jpg); }
-.portfolio-thumb-3 { background-image: url(../img/scaff.jpg); }
+.portfolio-thumb-1 {
+   background-image: url(../img/plant.png);
+}
+.portfolio-thumb-2 { background-image: url(../img/plant.png); }
+.portfolio-thumb-3 { background-image: url(../img/best.jpg); }
 .portfolio-thumb-4 { background-image: url(../img/rose.jpg); }
 .portfolio-thumb-5 { background-image: url(../img/bostan.jpg); }
 
 .portfolio-thumb-6 { background-image: url(../img/alera.jpg); }
 .portfolio-thumb-7 { background-image: url(../img/ilink.jpg); }
+
+/* Recent projects grid beside text */
+.recent-portfolio .portfolio-thumb {
+  min-height: 320px;
+  height: 320px;
+}
+
+.recent-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Ensure grid items span full cell width and ignore flex constraints */
+.recent-portfolio .box-portfolio-item {
+  max-width: 100%;
+  -webkit-box-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+}
+
+.recent-portfolio .portfolio-card { width: 100%; }
+
+@media (max-width: 1199.98px) {
+  .recent-portfolio {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .recent-portfolio {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* Form */
 .section-form {
@@ -2253,7 +2290,7 @@ a:hover {
     border-right: 2px solid #f7f7f7;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    -webkit-transition: 0.3s;
+    -webkit-transition: 0.4s;
     transition: 0.3s; }
     .form__input:focus {
       border-right: 2px solid #ff7062; }
