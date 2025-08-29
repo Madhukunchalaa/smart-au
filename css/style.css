@@ -1457,6 +1457,19 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 2rem; }
+
+.projects-carousel {
+  margin-top: 2rem; }
+  .projects-carousel .owl-nav {
+    display: none; }
+  .projects-carousel .owl-dots {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem; }
   .team-carousel .owl-dot {
     margin-left: 8px;
     margin-right: 8px;
@@ -1481,6 +1494,31 @@ a:hover {
       width: 35px; }
       @media (max-width: 767.98px) {
         .team-carousel .owl-dot.active span {
+          width: 8px; } }
+  .projects-carousel .owl-dot {
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    @media (max-width: 767.98px) {
+      .projects-carousel .owl-dot {
+        margin-left: 4px;
+        margin-right: 4px; } }
+    .projects-carousel .owl-dot span {
+      width: 20px;
+      height: 2px;
+      background-color: #cccccc;
+      display: block; }
+      @media (max-width: 767.98px) {
+        .projects-carousel .owl-dot span {
+          width: 8px;
+          height: 8px;
+          border-radius: 100%; } }
+    .projects-carousel .owl-dot.active span {
+      background-color: #f00;
+      width: 35px; }
+      @media (max-width: 767.98px) {
+        .projects-carousel .owl-dot.active span {
           width: 8px; } }
   .team-carousel-item {
     width: 100%;
@@ -2066,6 +2104,7 @@ a:hover {
 /* Card container */
 .portfolio-card {
   display: block;
+  width: 309px;
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
