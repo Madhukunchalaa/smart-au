@@ -1491,6 +1491,22 @@ a:hover {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 2rem; }
+  .projects-carousel .owl-item {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .projects-carousel .box-portfolio-item {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    flex: 0 0 auto;
+  }
+  .projects-carousel .portfolio-card {
+    width: 100%;
+    max-width: 350px;
+    min-width: 280px;
+  }
   .team-carousel .owl-dot {
     margin-left: 8px;
     margin-right: 8px;
@@ -2168,12 +2184,14 @@ a:hover {
 /* Card container */
 .portfolio-card {
   display: block;
-  width: 309px;
+  width: 100%;
+  max-width: 350px;
   border-radius: 12px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
 }
 
 .portfolio-card:hover {
@@ -2184,9 +2202,9 @@ a:hover {
 /* Thumbnail (image area) */
 .portfolio-thumb {
   width: 100%;                   /* ✅ full width */
-  min-height: 400px;             /* ✅ increased height for bigger cards */
-  background-size: 100% 100%;    /* ✅ stretch image to fill entire container */
-  background-position: center center;
+  min-height: 360px;             /* ✅ reduced height for better proportions */
+  background-size: cover;      /* ✅ contain to show full image without cropping */
+  background-position: top;
   position: relative;  
   background-repeat: no-repeat;          /* ✅ important for overlay */
   overflow: hidden;
@@ -2195,11 +2213,11 @@ a:hover {
   transition: transform 0.4s ease;
   display: block;                /* ✅ ensure block display */
   background-color: #f0f0f0;     /* ✅ fallback color to match image */
-  height: 400px;                 /* ✅ fixed height to match min-height */
+  height: 320px;                 /* ✅ fixed height to match min-height */
 }
 
 .portfolio-card:hover .portfolio-thumb {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 
@@ -2291,20 +2309,65 @@ a:hover {
 
 /* Background images */
 .portfolio-thumb-1 {
-   background-image: url(../img/plant.png);
+   background-image: url(../img/pmi.png);
 }
-.portfolio-thumb-2 { background-image: url(../img/plant.png); }
-.portfolio-thumb-3 { background-image: url(../img/best.jpg); }
-.portfolio-thumb-4 { background-image: url(../img/rose.jpg); }
-.portfolio-thumb-5 { background-image: url(../img/bostan.jpg); }
+.portfolio-thumb-2 { background-image: url(../img/plantmm.png); }
+.portfolio-thumb-3 { background-image: url(../img/bttt.png); }
+.portfolio-thumb-4 { background-image: url(../img/boost.png); }
+.portfolio-thumb-5 { background-image: url(../img/roose.png); }
 
-.portfolio-thumb-6 { background-image: url(../img/alera.jpg); }
-.portfolio-thumb-7 { background-image: url(../img/ilink.jpg); }
+.portfolio-thumb-6 { background-image: url(../img/aleraa.png); }
+.portfolio-thumb-7 { background-image: url(../img/ilinkk.png); }
 
 /* Recent projects grid beside text */
 .recent-portfolio .portfolio-thumb {
   min-height: 320px;
   height: 320px;
+}
+
+/* Responsive adjustments for carousel cards */
+@media (max-width: 768px) {
+  .portfolio-thumb {
+    min-height: 280px;
+    height: 280px;
+    background-size: contain;  /* ✅ ensure full image visibility on mobile */
+  }
+  
+  .portfolio-card {
+    max-width: 300px;
+    min-width: 250px;
+  }
+  
+  .projects-carousel .box-portfolio-item {
+    max-width: 300px;
+  }
+  
+  .projects-carousel .portfolio-card {
+    max-width: 300px;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .portfolio-thumb {
+    min-height: 250px;
+    height: 250px;
+    background-size: contain;  /* ✅ ensure full image visibility on small mobile */
+  }
+  
+  .portfolio-card {
+    max-width: 280px;
+    min-width: 220px;
+  }
+  
+  .projects-carousel .box-portfolio-item {
+    max-width: 280px;
+  }
+  
+  .projects-carousel .portfolio-card {
+    max-width: 280px;
+    min-width: 220px;
+  }
 }
 
 .recent-portfolio {
