@@ -26,7 +26,7 @@ $(window).on("load", function() {
     // Projects Carousel
     $('.projects-carousel').owlCarousel({
         loop: true,
-        margin: 30,
+        margin: 20,
         nav: true,
         dots: true,
         autoplay: true,
