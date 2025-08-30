@@ -877,14 +877,29 @@ a:hover {
 
 /* Action */
 .section-action {
-  background-color: #f7f7f7;
-  background-image: url(../img/lets-connect-img.jpg);
+  background-image: url(../img/lets-connect-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   padding-top: 3.9rem;
   padding-bottom: 4rem;
   position: relative; }
+
+  .section-action::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.section-action * {
+  position: relative;
+  z-index: 2; 
+}
+
   @media (max-width: 575.98px) {
     .section-action {
       text-align: center; } }
@@ -893,6 +908,8 @@ a:hover {
    }
    #lets-connect{
     color: white;
+    font-size: 18px;
+    padding: 20px 0;
    }
   @media (max-width: 767.98px) {
     .section-action {
@@ -969,7 +986,8 @@ a:hover {
       -ms-flex: 0 0 33.333333%;
           flex: 0 0 33.333333%;
   max-width: 33.333333%;
-  padding: 1rem 2.5rem; }
+  padding: 1rem 2.5rem; 
+  margin-bottom: 41px;}
   @media (max-width: 767.98px) {
     .col-services {
       -webkit-box-flex: 0;
@@ -987,7 +1005,7 @@ a:hover {
         border-left: none;
         border-right: none; } }
   .col-services img {
-    width: 51px;
+    width: 60px;
     margin-bottom: 2.9rem; }
   .col-services .title-h3 {
     margin-bottom: 0.9rem; }
@@ -1334,7 +1352,6 @@ a:hover {
 /* Cases */
 .section-case {
   position: relative;
-  padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   }
 
@@ -1582,35 +1599,35 @@ a:hover {
     -o-object-fit: cover;
        object-fit: cover; }
   .team-carousel-1 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-2 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-3 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-4 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-5 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-6 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-7 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-8 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-9 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-10 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-11 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-12 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-13 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-14 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
   .team-carousel-15 {
-    background-image: url(https://via.placeholder.com/360x480); }
+    background-image: url(../img/testimonial-sample.png); }
 
 .team-name {
   background-color: #ff7062;
@@ -1758,7 +1775,8 @@ a:hover {
 
 /* Blog */
 .section-blog {
-  padding-top: 3.5rem; }
+  /* padding-top: 3.5rem; */
+ }
   .section-blog--full {
     padding-top: 4.5rem;
     padding-bottom: 7.5rem; }
@@ -1790,7 +1808,7 @@ a:hover {
     .row-blog {
       margin-right: 0;
       margin-left: 0; } }
-
+/* our process */
 .thumb-blog {
   width: 100%;
   height: 173px;
@@ -1816,6 +1834,47 @@ a:hover {
     .thumb-blog-4 {
     background-image: url(../img/launch1.jpg); }
 
+
+.thumb-blog-1::after {
+    content: '1';
+}
+
+.thumb-blog-2::after {
+    content: '2';
+}
+
+.thumb-blog-3::after {
+    content: '3';
+}
+
+.thumb-blog-4::after {
+    content: '4';
+}
+
+.thumb-blog::after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: #ff7062;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(255, 112, 98, 0.4);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.col-post:hover .thumb-blog::after {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(255, 112, 98, 0.6);
+}
+
 .post-date {
   position: absolute;
   background-color: #ffffff;
@@ -1831,7 +1890,7 @@ a:hover {
           flex: 0 0 33.333333%;
   max-width: 33.333333%;
   padding: 1rem 2.5rem;
-  margin-bottom: 5.7rem; }
+  margin-bottom: 4.7rem; }
   @media (max-width: 767.98px) {
     .col-post {
       -webkit-box-flex: 0;
@@ -2333,6 +2392,7 @@ a:hover {
     background-color: #f7f7f7;
     padding: 1.1rem 1.5rem;
     height: 50px;
+    color:#757575;
     border: none;
     border-right: 2px solid #f7f7f7;
     -webkit-box-sizing: border-box;
@@ -3178,7 +3238,10 @@ a:hover {
       background-blend-mode: luminosity; }
 
 .section-feedback {
-  padding-bottom: 3.85rem; }
+  padding-bottom: 3.85rem;
+  padding-top: 40px;
+  background-color:rgb(247, 247, 247)
+ }
 
 .feedback-carousel {
   margin-top: 5.8rem;}
@@ -3266,7 +3329,8 @@ a:hover {
        object-fit: cover; }
   .box-user__text {
     font-size: 1rem;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+  color: #ff7062; }
 
 .box-reason {
   display: -webkit-box;
@@ -3324,7 +3388,7 @@ a:hover {
     margin-bottom: 2rem; }
 
 .footer-body {
-  background-image: url(img/map/map-bg2.svg);
+  background-image: url(../img/footer-bg3.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3562,7 +3626,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 80%;
-  background-color: #ff7062;
+  background-color: black;
   background-blend-mode: luminosity;
   opacity: 0;
   visibility: hidden;
