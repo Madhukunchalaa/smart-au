@@ -1463,7 +1463,7 @@ a:hover {
     margin-top: 2rem; }
 
 .projects-carousel {
-  margin-top: 2rem; }
+  margin-top: 0rem; }
   .projects-carousel .owl-nav {
     display: none; }
   .projects-carousel .owl-dots {
@@ -1808,11 +1808,13 @@ a:hover {
     .thumb-blog {
       height: 173px; } }
   .thumb-blog-1 {
-    background-image: url(https://via.placeholder.com/310x173); }
+    background-image: url(../img/discovery-strategy1.jpg); }
   .thumb-blog-2 {
-    background-image: url(https://via.placeholder.com/310x173); }
+    background-image: url(../img/design1.jpg); }
   .thumb-blog-3 {
-    background-image: url(https://via.placeholder.com/310x173); }
+    background-image: url(../img/develop-test1.jpg); }
+    .thumb-blog-4 {
+    background-image: url(../img/launch1.jpg); }
 
 .post-date {
   position: absolute;
