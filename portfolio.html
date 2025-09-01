@@ -85,7 +85,7 @@
         </div>
         <div class="section-banner__box">
            <div class="section-banner__thumb">
-               <img class="section-banner__img" src="img/portfolio-banner.jpg" alt="Image Banner">
+               <img class="section-banner__img" src="img/banner3.jpg" alt="Image Banner">
            </div>
        </div>
     </section>
@@ -185,6 +185,104 @@
                     </div>
                   </a>
                 </div>
+                
+                <!-- Additional Projects (Hidden by default) -->
+                <div class="additional-projects" style="display: none;">
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-8">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">E-commerce Platform</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-9">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">Mobile Banking App</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-10">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">Real Estate Portal</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-11">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">Healthcare Management System</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-12">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">Educational Platform</p>
+                      </div>
+                    </a>
+                  </div>
+                  
+                  <div class="box-portfolio-item">
+                    <a href="#" class="portfolio-card">
+                      <!-- Image + overlay -->
+                      <div class="portfolio-thumb portfolio-thumb-13">
+                        <div class="portfolio-overlay">
+                          <p class="portfolio-overlay__title">View Project</p>
+                        </div>
+                      </div>
+                      <!-- Client name box -->
+                      <div class="portfolio-card-body">
+                        <p class="portfolio-client">Logistics Management System</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Load More Button -->
+              <div class="text-center mt-5">
+                <button id="loadMoreBtn" class="btn btn-primary btn-lg">Load More Projects</button>
               </div>
          </div>
      </section>
@@ -313,6 +411,16 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<!-- Plugins -->
 	<script src="js/plugins.js"></script>
+	
+	<!-- Load More Functionality -->
+	<script>
+		$(document).ready(function() {
+			$('#loadMoreBtn').click(function() {
+				$('.additional-projects').slideDown(800);
+				$(this).fadeOut(400);
+			});
+		});
+	</script>
 
 </body>
 

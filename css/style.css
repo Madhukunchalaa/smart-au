@@ -2318,6 +2318,54 @@ a:hover {
 
 .portfolio-thumb-6 { background-image: url(../img/aleraa.png); }
 .portfolio-thumb-7 { background-image: url(../img/ilinkk.png); }
+.portfolio-thumb-8 { background-image: url(../img/project1.png); }
+.portfolio-thumb-9 { background-image: url(../img/project2.png); }
+.portfolio-thumb-10 { background-image: url(../img/project3.png); }
+.portfolio-thumb-11 { background-image: url(../img/project4.png); }
+.portfolio-thumb-12 { background-image: url(../img/project5.png); }
+.portfolio-thumb-13 { background-image: url(../img/project6.png); }
+
+/* Load More Button Styling */
+#loadMoreBtn {
+  background: linear-gradient(135deg, #ff7062 0%, #ff8a7a 100%);
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 112, 98, 0.3);
+}
+
+#loadMoreBtn:hover {
+  background: linear-gradient(135deg, #ff8a7a 0%, #ff7062 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 112, 98, 0.4);
+}
+
+#loadMoreBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 112, 98, 0.2);
+}
+
+/* Additional Projects Animation */
+.additional-projects {
+  animation: fadeInUp 0.8s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Recent projects grid beside text */
 .recent-portfolio .portfolio-thumb {
