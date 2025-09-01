@@ -2318,12 +2318,16 @@ a:hover {
 
 .portfolio-thumb-6 { background-image: url(../img/aleraa.png); }
 .portfolio-thumb-7 { background-image: url(../img/ilinkk.png); }
-.portfolio-thumb-8 { background-image: url(../img/project1.png); }
-.portfolio-thumb-9 { background-image: url(../img/project2.png); }
-.portfolio-thumb-10 { background-image: url(../img/project3.png); }
-.portfolio-thumb-11 { background-image: url(../img/project4.png); }
-.portfolio-thumb-12 { background-image: url(../img/project5.png); }
-.portfolio-thumb-13 { background-image: url(../img/project6.png); }
+.portfolio-thumb-8 { background-image: url(../img/project1.jpg); }
+.portfolio-thumb-9 { background-image: url(../img/project2.jpg); }
+.portfolio-thumb-10 { background-image: url(../img/kmk.png); }
+.portfolio-thumb-11 { background-image: url(../img/kkproductions.png); }
+.portfolio-thumb-12 { background-image: url(../img/cgp.png); }
+.portfolio-thumb-13 { background-image: url(../img/dinesh.png); }
+.portfolio-thumb-14 { background-image: url(../img/maplegastro.png); }
+.portfolio-thumb-15 { background-image: url(../img/thedentistclinic.png); }
+.portfolio-thumb-16 { background-image: url(../img/scaffolding.png); }
+.portfolio-thumb-17 { background-image: url(../img/medicametrix.png); }
 
 /* Load More Button Styling */
 #loadMoreBtn {
@@ -2400,7 +2404,7 @@ a:hover {
   .portfolio-thumb {
     min-height: 250px;
     height: 250px;
-    background-size: contain;  /* ✅ ensure full image visibility on small mobile */
+    background-size: cover;  
   }
   
   .portfolio-card {
