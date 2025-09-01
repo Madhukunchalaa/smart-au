@@ -791,6 +791,7 @@ a:hover {
       .box-about-item {
         display: none; } }
   .box-about-text {
+    /* display: none; */
     position: absolute;
     left: -15px;
     bottom: 100px;
