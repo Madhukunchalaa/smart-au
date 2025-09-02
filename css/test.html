@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Card Flip</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    .section-services {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .row-services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card-flip {
+      perspective: 1000px;
+    }
+
+    .card-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-flip.flip .card-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background: #4CAF50;
+      color: white;
+    }
+
+    .card-front img {
+      max-width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .card-front h2,
+    .card-back h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .card-front h6 {
+      margin: 5px 0 10px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .card-front p {
+      font-size: 14px;
+      color: #444;
+    }
+
+    .card-back ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 10px 0;
+    }
+
+    .btn-text {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: white;
+      color: #4CAF50;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-text:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="section section-services">
+  <div class="container">
+    <p class="before-title text-center">Services that we provide</p>
+    <h2 class="title-h2 text-center">Solutions That Define Tomorrow</h2>
+    <p class="text-center after-title">Every great digital transformation begins with understanding not just what you need today, but what you'll need to dominate tomorrow. Our comprehensive suite of services combines strategic vision with technical mastery to deliver solutions that don't just meet expectations—they shatter them.</p>
+
+    <div class="row-services">
+
+      <!-- Card 1 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service1.png" alt="">
+                <h2 class="title-h3">Custom Web Development</h2>
+                <h6 class="title-h5">Transform Your Digital Presence</h6>
+                <p class="description">We engineer bespoke web solutions that become the cornerstone of your digital strategy. From high-performance corporate websites to complex web applications, every line of code is crafted with precision and purpose.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Custom Web Development</h2>
+              <p>Our web development expertise includes:</p>
+              <ul>
+                <li>Responsive Design</li>
+                <li>E-commerce Solutions</li>
+                <li>Progressive Web Apps</li>
+                <li>Custom CMS Development</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service2.png" alt="">
+                <h2 class="title-h3">Enterprise Applications</h2>
+                <h6 class="title-h5">Complex Challenges, Sophisticated Solutions</h6>
+                <p class="description">Enterprise success demands technology that can handle complexity while remaining elegant in execution. We build enterprise-grade systems that streamline operations, enhance productivity, and accelerate growth.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Enterprise Applications</h2>
+              <p>Our enterprise solutions include:</p>
+              <ul>
+                <li>ERP Systems</li>
+                <li>CRM Solutions</li>
+                <li>Business Intelligence Tools</li>
+                <li>Workflow Automation</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service3.png" alt="">
+                <h2 class="title-h3">Digital Transformation</h2>
+                <h6 class="title-h5">Navigate Tomorrow with Confidence</h6>
+                <p class="description">Digital transformation isn't just about adopting new technology—it's about fundamentally reimagining how your business operates in the digital age. We guide organizations through comprehensive transformation journeys.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Digital Transformation</h2>
+              <p>Our transformation services include:</p>
+              <ul>
+                <li>Digital Strategy Development</li>
+                <li>Process Optimization</li>
+                <li>Legacy System Modernization</li>
+                <li>Cloud Migration</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service4.png" alt="">
+                <h2 class="title-h3">Innovation Consulting</h2>
+                <h6 class="title-h5">Unlock Untapped Potential</h6>
+                <p class="description">Sometimes the most powerful solutions aren't obvious. Our innovation consulting unlocks possibilities you never knew existed, positioning your business at the forefront of industry evolution.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Innovation Consulting</h2>
+              <p>Our innovation services include:</p>
+              <ul>
+                <li>Technology Assessment</li>
+                <li>Innovation Workshops</li>
+                <li>Proof of Concept Development</li>
+                <li>Technology Roadmapping</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Handle flip for all cards
+  document.querySelectorAll(".flip-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      btn.closest(".card-flip").classList.add("flip");
+    });
+  });
+
+  document.querySelectorAll(".back-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      btn.closest(".card-flip").classList.remove("flip");
+    });
+  });
+</script>
+
+</body>
+</html>
