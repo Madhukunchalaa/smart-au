@@ -110,7 +110,7 @@
                         <h2 class="title-h3">Custom Web Development</h2>
                         <h6 class="title-h5">Transform Your Digital Presence</h6>
                         <p class="description">We engineer bespoke web solutions that become the cornerstone of your digital strategy. From high-performance corporate websites to complex web applications, every line of code is crafted with precision and purpose.</p>
-                        <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-text-img btn-flip" href="#" aria-expanded="false">Read more</a>
                     </div>
                     <div class="flip-card-back">
                         <img src="img/service1.png" alt="">
@@ -118,6 +118,7 @@
                         <h6 class="title-h5">Fast, secure and scalable web apps</h6>
                         <p class="description">From corporate sites to complex platforms, we deliver resilient, high‑performance web applications tailored to your goals.</p>
                         <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-back" href="#" aria-expanded="true">Back</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +129,7 @@
                         <h2 class="title-h3">Enterprise Applications</h2>
                         <h6 class="title-h5">Complex Challenges, Sophisticated Solutions</h6>
                         <p class="description">Enterprise success demands technology that can handle complexity while remaining elegant in execution. We build enterprise-grade systems that streamline operations, enhance productivity, and accelerate growth.</p>
-                        <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-text-img btn-flip" href="#" aria-expanded="false">Read more</a>
                     </div>
                     <div class="flip-card-back">
                         <img src="img/service2.png" alt="">
@@ -136,6 +137,7 @@
                         <h6 class="title-h5">Integrations, workflows, analytics</h6>
                         <p class="description">Modernize core systems, connect data silos and automate processes with robust, maintainable enterprise software.</p>
                         <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-back" href="#" aria-expanded="true">Back</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +148,7 @@
                         <h2 class="title-h3">Digital Transformation</h2>
                         <h6 class="title-h5">Navigate Tomorrow with Confidence</h6>
                         <p class="description">Digital transformation isn't just about adopting new technology—it's about fundamentally reimagining how your business operates in the digital age. We guide organizations through comprehensive transformation journeys.</p>
-                        <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-text-img btn-flip" href="#" aria-expanded="false">Read more</a>
                     </div>
                     <div class="flip-card-back">
                         <img src="img/service3.png" alt="">
@@ -154,6 +156,7 @@
                         <h6 class="title-h5">Roadmaps, platforms, culture change</h6>
                         <p class="description">Accelerate innovation across people, process and platforms with measurable business outcomes.</p>
                         <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-back" href="#" aria-expanded="true">Back</a>
                     </div>
                 </div>
             </div>
@@ -164,7 +167,7 @@
                         <h2 class="title-h3">Innovation Consulting</h2>
                         <h6 class="title-h5">Unlock Untapped Potential</h6>
                         <p class="description">Sometimes the most powerful solutions aren't obvious. Our innovation consulting unlocks possibilities you never knew existed, positioning your business at the forefront of industry evolution.</p>
-                        <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-text-img btn-flip" href="#" aria-expanded="false">Read more</a>
                     </div>
                     <div class="flip-card-back">
                         <img src="img/service4.png" alt="">
@@ -172,6 +175,7 @@
                         <h6 class="title-h5">Ideation to MVP, faster</h6>
                         <p class="description">Validate ideas rapidly, de‑risk investments and bring new products to market with confidence.</p>
                         <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
+                        <a class="btn-text btn-back" href="#" aria-expanded="true">Back</a>
                     </div>
                 </div>
             </div>
@@ -517,16 +521,21 @@
 
 	<script>
 		document.addEventListener('click', function(event) {
-			var trigger = event.target.closest('a.btn-text');
-			if (!trigger) return;
-			var servicesSection = trigger.closest('.section-services');
+			var btn = event.target.closest('a.btn-flip, a.btn-back');
+			if (!btn) return;
+			var servicesSection = btn.closest('.section-services');
 			if (!servicesSection) return;
-			event.preventDefault();
-			var flipCard = trigger.closest('.flip-card');
+			var flipCard = btn.closest('.flip-card');
 			if (!flipCard) return;
-			var isActive = flipCard.classList.contains('is-flipped');
-			flipCard.classList.toggle('is-flipped');
-			trigger.setAttribute('aria-expanded', String(!isActive));
+			event.preventDefault();
+			if (btn.classList.contains('btn-back')) {
+				flipCard.classList.remove('is-flipped');
+				var frontBtn = flipCard.querySelector('a.btn-flip');
+				if (frontBtn) frontBtn.setAttribute('aria-expanded', 'false');
+			} else {
+				flipCard.classList.add('is-flipped');
+				btn.setAttribute('aria-expanded', 'true');
+			}
 		});
 	</script>
 
