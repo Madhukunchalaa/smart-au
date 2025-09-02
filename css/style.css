@@ -3886,7 +3886,8 @@ margin-top: 7rem;
 }
 
 .flip-card:hover .flip-card-inner,
-.flip-card:focus-within .flip-card-inner {
+.flip-card:focus-within .flip-card-inner,
+.flip-card.is-flipped .flip-card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
