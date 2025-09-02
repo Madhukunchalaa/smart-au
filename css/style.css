@@ -997,7 +997,7 @@ margin-top: 7rem;
 /* Offer */
 .section-offer {
   background-color: #222222;
-  background-image: url(img/map/map-bg2.svg);
+  background-image: url(../img/map/map-bg2.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
