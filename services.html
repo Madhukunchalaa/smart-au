@@ -471,6 +471,30 @@
 	<!-- Plugins -->
 	<script src="js/plugins.js"></script>
 
+	<script>
+		document.addEventListener('click', function(event) {
+			var trigger = event.target.closest('a.btn-text');
+			if (!trigger) return;
+			var offerSection = trigger.closest('.section-list-offer');
+			if (!offerSection) return;
+			event.preventDefault();
+			var card = trigger.closest('.col-offer');
+			if (!card) return;
+			var desc = card.querySelector('p.description');
+			if (!desc) return;
+			var isClamped = desc.classList.contains('line-clamp');
+			if (isClamped) {
+				desc.classList.remove('line-clamp');
+				trigger.textContent = 'Less';
+				trigger.setAttribute('aria-expanded', 'true');
+			} else {
+				desc.classList.add('line-clamp');
+				trigger.textContent = 'More';
+				trigger.setAttribute('aria-expanded', 'false');
+			}
+		});
+	</script>
+
 </body>
 
 </html>
