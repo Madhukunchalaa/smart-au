@@ -4023,6 +4023,7 @@ margin-top: 7rem;
 
 .col-services.flip-card {
   position: relative;
+  margin-bottom: 60px;
 }
 
 .flip-card-inner {
