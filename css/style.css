@@ -2626,7 +2626,20 @@ margin-top: 7rem;
     margin-bottom: 0.71rem; }
   .list-decoration .zmdi {
     margin-right: 1.3rem;
+    font-size: 25px;
     color: #ff7062; }
+
+    .list-decoration-item {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-start; /* keep text aligned left */
+  margin-bottom: 15px; /* space between list items */
+}
+
+.list-decoration-item i {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
 .sidebar .title-h3 {
   font-size: 1.71rem;
