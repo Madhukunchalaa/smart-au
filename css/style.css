@@ -1350,8 +1350,8 @@ margin-top: 7rem;
         .work-image-1 {
             top: 10%;
             left: 5%;
-            width: 40%;
-            height: 35%;
+            width: 38%;
+            height: 40%;
             z-index: 3;
         }
         .work-image-2 {
@@ -1362,10 +1362,10 @@ margin-top: 7rem;
             z-index: 2;
         }
         .work-image-3 {
-            bottom: 15%;
-            left: 15%;
-            width: 35%;
-            height: 30%;
+            bottom: 3%;
+          left: 13%;
+          width: 38%;
+          height: 40%;
             z-index: 1;
         }
         @media (max-width: 991.98px) {
