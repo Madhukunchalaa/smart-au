@@ -236,47 +236,53 @@
         </div>
     </section>
 
-    <section class="section section-description">
+    <section class="section section-description methodology-modern">
         <div class="container">
             <p class="before-title text-center">Precision in Every Phase</p>
-               <h2 class="title-h2 text-center">Our Proven Methodology</h2>
-            <div class="row row-post">
-              <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                <div class="row row-step">
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 1</span>
-                        <h3 class="title-h3">Discovery &amp; Strategic Planning</h3> 
-                        <span class="row-step__text">We immerse ourselves in your business ecosystem, understanding your goals, challenges, and market position to craft a comprehensive transformation roadmap.</span>
-                    </div>
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 2</span>
-                        <h3 class="title-h3">Architecture &amp; Design</h3>
-                        <span class="row-step__text">Our senior architects design scalable, secure solutions that anticipate future needs while solving today's challenges with elegant efficiency.</span>
-                    </div>
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 3</span>
-                        <h3 class="title-h3">Development &amp; Engineering</h3>
-                        <span class="row-step__text">Rigorous development practices ensure every component meets our exacting standards for quality, security, and performance excellence.</span>
-                    </div>
+            <h2 class="title-h2 text-center">Our Proven Methodology</h2>
+
+            <div class="methodology-grid">
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">🔍</div>
+                    <div class="methodology-step">Step 1</div>
+                    <h3 class="title-h3">Discovery &amp; Strategic Planning</h3>
+                    <p class="methodology-text">We immerse ourselves in your business ecosystem, understanding your goals, challenges, and market position to craft a comprehensive transformation roadmap.</p>
                 </div>
-                <div class="row row-step">
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 4</span>
-                        <h3 class="title-h3">Testing &amp; Quality Assurance</h3> 
-                        <span class="row-step__text">Comprehensive testing protocols validate functionality, performance, and security before any solution reaches production environments.</span>
-                    </div>
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 5</span>
-                        <h3 class="title-h3">Launch &amp; Optimization</h3>
-                        <span class="row-step__text">Strategic deployment ensures flawless performance from day one, with continuous monitoring and optimization for sustained excellence.</span>
-                    </div>
-                    <div class="col-xl-4 col-md-4 col-sm-12 col-12">
-                        <span class="accent-title">Step 6</span>
-                        <h3 class="title-h3">Ongoing Partnership</h3> 
-                        <span class="row-step__text">Your success is our success. We provide ongoing support, enhancements, and strategic guidance to ensure continued competitive advantage.</span>
-                    </div>
+
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">🏗️</div>
+                    <div class="methodology-step">Step 2</div>
+                    <h3 class="title-h3">Architecture &amp; Design</h3>
+                    <p class="methodology-text">Our senior architects design scalable, secure solutions that anticipate future needs while solving today's challenges with elegant efficiency.</p>
                 </div>
-              </div>
+
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">⚙️</div>
+                    <div class="methodology-step">Step 3</div>
+                    <h3 class="title-h3">Development &amp; Engineering</h3>
+                    <p class="methodology-text">Rigorous development practices ensure every component meets our exacting standards for quality, security, and performance excellence.</p>
+                </div>
+
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">🧪</div>
+                    <div class="methodology-step">Step 4</div>
+                    <h3 class="title-h3">Testing &amp; Quality Assurance</h3>
+                    <p class="methodology-text">Comprehensive testing protocols validate functionality, performance, and security before any solution reaches production environments.</p>
+                </div>
+
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">🚀</div>
+                    <div class="methodology-step">Step 5</div>
+                    <h3 class="title-h3">Launch &amp; Optimization</h3>
+                    <p class="methodology-text">Strategic deployment ensures flawless performance from day one, with continuous monitoring and optimization for sustained excellence.</p>
+                </div>
+
+                <div class="methodology-card reveal">
+                    <div class="methodology-icon">🤝</div>
+                    <div class="methodology-step">Step 6</div>
+                    <h3 class="title-h3">Ongoing Partnership</h3>
+                    <p class="methodology-text">Your success is our success. We provide ongoing support, enhancements, and strategic guidance to ensure continued competitive advantage.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -526,7 +532,15 @@
 	<script src="js/plugins.js"></script>
 
 	<script>
-		// Flip-card interaction removed for new static layout
+		// Reveal animation for methodology cards
+		(function(){
+			var observer = new IntersectionObserver(function(entries){
+				entries.forEach(function(entry){
+					if(entry.isIntersecting){ entry.target.classList.add('active'); }
+				});
+			},{ threshold: 0.1 });
+			document.querySelectorAll('.methodology-modern .reveal').forEach(function(el){ observer.observe(el); });
+		})();
 	</script>
 
 </body>
