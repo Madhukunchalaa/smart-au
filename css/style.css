@@ -1008,9 +1008,32 @@ margin-top: 7rem;
 /* Methodology modern section (uses site colors) */
 .methodology-modern {
   background: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 .methodology-modern .title-h2 {
   background: none;
+}
+.methodology-modern::before,
+.methodology-modern::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+.methodology-modern::before {
+  top: -140px;
+  left: -120px;
+  background: radial-gradient(closest-side, rgba(255,112,98,0.18), rgba(255,112,98,0));
+}
+.methodology-modern::after {
+  right: -160px;
+  bottom: -160px;
+  background: radial-gradient(closest-side, rgba(255,112,98,0.12), rgba(255,112,98,0));
 }
 .methodology-grid {
   display: grid;
@@ -1021,17 +1044,21 @@ margin-top: 7rem;
 .methodology-card {
   position: relative;
   overflow: hidden;
-  background: rgba(34, 34, 34, 0.03);
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   border: 1px solid #eeeeee;
   border-radius: 20px;
   padding: 28px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+  z-index: 1;
 }
 .methodology-card:hover {
   transform: translateY(-10px) rotateX(5deg);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15), 0 10px 25px rgba(255,112,98,0.15);
   border-color: rgba(255,112,98,0.35);
 }
 .methodology-card::before {
@@ -1041,10 +1068,25 @@ margin-top: 7rem;
   left: -120%;
   width: 120%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
   transition: left 0.8s ease;
 }
 .methodology-card:hover::before { left: 120%; }
+.methodology-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px; /* gradient border width */
+  background: linear-gradient(135deg, rgba(255,112,98,0.45), rgba(255,112,98,0.15));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.methodology-card:hover::after { opacity: 1; }
 .methodology-icon {
   width: 54px;
   height: 54px;
@@ -1059,6 +1101,11 @@ margin-top: 7rem;
   transition: transform 0.3s ease;
 }
 .methodology-card:hover .methodology-icon { transform: rotateY(180deg) scale(1.08); }
+.methodology-card:nth-child(2) .methodology-icon { background: linear-gradient(135deg, #ff7062, #ff8a7f); }
+.methodology-card:nth-child(3) .methodology-icon { background: linear-gradient(135deg, #ff7062, #ffa296); }
+.methodology-card:nth-child(4) .methodology-icon { background: linear-gradient(135deg, #ff7062, #ff8a7f); }
+.methodology-card:nth-child(5) .methodology-icon { background: linear-gradient(135deg, #ff7062, #ffa296); }
+.methodology-card:nth-child(6) .methodology-icon { background: linear-gradient(135deg, #ff7062, #ff8a7f); }
 .methodology-step {
   font-size: 0.8rem;
   font-weight: 700;
