@@ -1014,22 +1014,37 @@ margin-top: 7rem;
 }
 .methodology-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  margin-top: 40px;
 }
 .methodology-card {
+  position: relative;
+  overflow: hidden;
   background: rgba(34, 34, 34, 0.03);
   border: 1px solid #eeeeee;
-  border-radius: 16px;
-  padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border-radius: 20px;
+  padding: 28px;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .methodology-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
-  border-color: #e6e6e6;
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  border-color: rgba(255,112,98,0.35);
 }
+.methodology-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0) 100%);
+  transition: left 0.8s ease;
+}
+.methodology-card:hover::before { left: 120%; }
 .methodology-icon {
   width: 54px;
   height: 54px;
@@ -1041,7 +1056,9 @@ margin-top: 7rem;
   background: #ff7062; /* site accent */
   color: #fff;
   margin-bottom: 12px;
+  transition: transform 0.3s ease;
 }
+.methodology-card:hover .methodology-icon { transform: rotateY(180deg) scale(1.08); }
 .methodology-step {
   font-size: 0.8rem;
   font-weight: 700;
