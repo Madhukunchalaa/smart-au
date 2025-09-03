@@ -1432,6 +1432,19 @@ margin-top: 7rem;
             font-weight: 500;
         }
 
+      .logo-design{
+        
+        font-weight: bold;
+        font-size: 40px;
+      }
+      .design-x{
+        color: #ff7062;
+
+      }
+
+
+
+
 .section-client {
   padding-top: 9.7rem;
   padding-bottom: 8.9rem; }
