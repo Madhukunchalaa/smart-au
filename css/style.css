@@ -862,8 +862,8 @@ margin-top: 7rem;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 3.9rem;
-  padding-bottom: 4rem;
+  padding-top: 1.9rem;
+  padding-bottom: 2rem;
   position: relative; }
 
   .section-action::before {
@@ -951,12 +951,8 @@ margin-top: 7rem;
 }
 
 .service-feature {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
-  border-radius: 16px;
-  padding: 28px;
   margin-bottom: 32px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+ 
 }
 
 .service-feature .feature-image {
