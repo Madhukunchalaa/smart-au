@@ -873,7 +873,7 @@ margin-top: 7rem;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 .section-action * {
@@ -996,11 +996,11 @@ margin-top: 7rem;
 
 /* Offer */
 .section-offer {
-  background-color: #222222;
-  background-image: url(../img/map/map-bg2.svg);
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url(../img/tech-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: top;
   padding-top: 3.6rem;
   padding-bottom: 3.6rem;
   position: relative; }
@@ -1014,7 +1014,7 @@ margin-top: 7rem;
   .section-offer .before-title::before {
     background-image: url(img/logo/shape-banner.svg); }
   .section-offer .title-h2 {
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     color: #ffffff; }
 
 .grid-offer {
@@ -1037,6 +1037,7 @@ margin-top: 7rem;
   .grid-offer-item {
     background-color: #363636;
     color: #cccccc;
+    flex-direction: column;
     padding: 1.78rem 2.07rem;
     -webkit-transition: 0.3s;
     transition: 0.3s;
@@ -1277,6 +1278,19 @@ margin-top: 7rem;
     color: #ffffff; }
     .col-offer:hover .title-h3 a {
       color: #ff7062; }
+
+
+
+.built-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
 
 /* Work */
       .section-work {
@@ -2384,7 +2398,7 @@ margin-top: 7rem;
 /* Overlay text */
 .portfolio-overlay__title {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 9px;
   font-family: 'Nova Flat', cursive;
   background: rgba(0,0,0,0.4);
   padding: 8px 20px;
@@ -3638,7 +3652,7 @@ margin-top: 7rem;
     line-height: 1.5;
     margin-bottom: 0; }
   .box-reason__img {
-    max-width: 50px;
+    max-width: 60px;
     margin-bottom: 2.5rem; }
     @media (max-width: 575.98px) {
       .box-reason__img {
