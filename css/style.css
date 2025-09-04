@@ -4134,7 +4134,7 @@ margin-top: 7rem;
 .rotating-text {
   width: 180px;
   height: 180px;
-  fill: #a0ffa6; /* light accent */
+  fill: #ff7062; /* light accent */
   animation: rotateBadge 14s linear infinite;
 }
 
@@ -4150,7 +4150,7 @@ margin-top: 7rem;
   top: 50%;
   transform: translate(-50%, -50%);
   color: #0b0b0b;
-  background: #a0ffa6;
+  background: #ff7062;
   width: 56px;
   height: 56px;
   display: -webkit-box;
@@ -4196,7 +4196,7 @@ margin-top: 7rem;
 }
 
 .process-card-head { margin-bottom: 0.6rem; }
-.step-kicker { color: #a0ffa6; font-weight: 800; letter-spacing: 1px; }
+.step-kicker { color: #ff7062; font-weight: 800; letter-spacing: 1px; }
 .process-card .description { color: #cfcfcf; }
 .process-media { margin-top: 0.9rem; border-radius: 14px; overflow: hidden; }
 .process-media img { width: 100%; display: block; }
