@@ -828,8 +828,8 @@ margin-top: 7rem;
   padding-bottom: 8.5rem; }
 
 .box-count {
-  background-color: #f7f7f7;
-  padding: 2.85rem 3.92rem; }
+  background-color: #f7f7f7!important;
+  padding: 2.85rem 3.92rem!important; }
 
 .row-count {
   background-color: #ffffff;
@@ -957,7 +957,7 @@ margin-top: 7rem;
 
 .service-feature .feature-image {
   width: 100%;
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 .service-feature .feature-kicker {
@@ -971,6 +971,8 @@ margin-top: 7rem;
 
 .service-feature .feature-subtitle {
   margin-top: 14px;
+  font-size: 1.2rem;
+  font-family: "Nova Flat";
   margin-bottom: 10px;
   color: #222222;
 }
@@ -978,26 +980,27 @@ margin-top: 7rem;
 .service-feature .feature-list {
   margin: 0;
   padding: 0;
+  font-size: 1.21rem;
   list-style: none;
+}
+.description{
+  font-size: 1.21rem;
+}
+.main-heading{
+  font-weight: 600;
 }
 
 .service-feature .feature-list li {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 10px;
   color: #757575;
 }
 
-.service-feature .feature-list .list-icon {
+.service-feature .feature-list .list-icon .zmdi{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
-  min-width: 26px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background: #ff7062;
+  font-size: 25px!important;
   color: #fff;
 }
 
