@@ -24,7 +24,7 @@
 	<!-- Custom Style -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
-
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -236,90 +236,69 @@
         </div>
     </section>
 
-    <section class="section section-methodology">
-        <div class="container">
-            <div class="row align-items-start">
-                <div class="col-xl-5 col-lg-5 col-md-12">
-                    <div class="process-left">
-                        <p class="before-title">Precision in Every Phase</p>
-                        <h2 class="title-h2">Our Proven Methodology</h2>
-                        <p class="after-title">Our step-by-step approach ensures seamless project execution, from understanding your needs to delivering tailored solutions that scale with your ambitions.</p>
-
-                        <div class="rotating-badge" aria-hidden="true">
-                            <svg class="rotating-text" viewBox="0 0 200 200">
-                                <defs>
-                                    <path id="circlePath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"/>
-                                </defs>
-                                <text dy="5" class="badge-text">
-                                    <textPath xlink:href="#circlePath">GET FREE CONSULTATION • GET FREE CONSULTATION • </textPath>
-                                </text>
-                            </svg>
-                            <span class="badge-arrow">↗</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xl-7 col-lg-7 col-md-12">
-                    <div class="process-right">
-                        <div class="process-scroll" id="processScroll">
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 01</span>
-                                    <h3 class="title-h3">Discovery &amp; Strategic Planning</h3>
-                                </div>
-                                <p class="description">We immerse ourselves in your business ecosystem, understanding your goals, challenges, and market position to craft a comprehensive transformation roadmap.</p>
-                                <div class="process-media"><img src="img/service-1.jpg" alt="Step 1"></div>
-                            </article>
-
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 02</span>
-                                    <h3 class="title-h3">Architecture &amp; Design</h3>
-                                </div>
-                                <p class="description">Our senior architects design scalable, secure solutions that anticipate future needs while solving today's challenges with elegant efficiency.</p>
-                                <div class="process-media"><img src="img/service-2.jpg" alt="Step 2"></div>
-                            </article>
-
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 03</span>
-                                    <h3 class="title-h3">Development &amp; Engineering</h3>
-                                </div>
-                                <p class="description">Rigorous development practices ensure every component meets our exacting standards for quality, security, and performance excellence.</p>
-                                <div class="process-media"><img src="img/service-3.jpg" alt="Step 3"></div>
-                            </article>
-
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 04</span>
-                                    <h3 class="title-h3">Testing &amp; Quality Assurance</h3>
-                                </div>
-                                <p class="description">Comprehensive testing protocols validate functionality, performance, and security before any solution reaches production environments.</p>
-                                <div class="process-media"><img src="img/service-4.jpg" alt="Step 4"></div>
-                            </article>
-
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 05</span>
-                                    <h3 class="title-h3">Launch &amp; Optimization</h3>
-                                </div>
-                                <p class="description">Strategic deployment ensures flawless performance from day one, with continuous monitoring and optimization for sustained excellence.</p>
-                                <div class="process-media"><img src="img/work-img2.jpg" alt="Step 5"></div>
-                            </article>
-
-                            <article class="process-card">
-                                <div class="process-card-head">
-                                    <span class="step-kicker">STEP 06</span>
-                                    <h3 class="title-h3">Ongoing Partnership</h3>
-                                </div>
-                                <p class="description">Your success is our success. We provide ongoing support, enhancements, and strategic guidance to ensure continued competitive advantage.</p>
-                                <div class="process-media"><img src="img/work-img-3.jpg" alt="Step 6"></div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="section section-description">
+    <div class="container containers">
+        <!-- Left -->
+        <div class="left">
+            <p class="before-title">Precision in Every Phase</p>
+            <h2 class="title-h2">Our Proven Methodology</h2>
+            <p>Our step-by-step approach ensures seamless project execution, from understanding your needs to delivering tailored IT solutions.</p>
+            <div class="how-work-circle" onclick="scrollToNext()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+                <path d="M10,60a50,50,0,1,1,50,50,50,50,0,0,1-50-50" id="circle-path"></path>
+                <text>
+                    <textPath href="#circle-path" startOffset="0%">* Get free consultation * Get free consultation</textPath>
+                </text>
+            </svg>
+            <i class="fa-solid fa-arrow-right"></i>
         </div>
+    </div>
+
+    <!-- Right -->
+    <div class="right">
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 01</h3>
+        <h2 class="title-h3 main-heading heading">Discovery & Strategic Planning </h2>
+        <p>We immerse ourselves in your business ecosystem, understanding your goals, challenges, and market position to craft a comprehensive transformation roadmap.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+      </div>
+
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 02</h3>
+        <h2 class="title-h3 main-heading heading">Architecture & Design </h2>
+        <p>Our senior architects design scalable, secure solutions that anticipate future needs while solving today's challenges with elegant efficiency.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-2.jpg" alt="">
+      </div>
+
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 03</h3>
+        <h2 class="title-h3 main-heading heading">Development & Engineering </h2>
+        <p>Rigorous development practices ensure every component meets our exacting standards for quality, security, and performance excellence.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-3.jpg" alt="">
+      </div>
+
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 04</h3>
+        <h2 class="title-h3 main-heading heading">Testing & Quality Assurance</h2>
+        <p>Comprehensive testing protocols validate functionality, performance, and security before any solution reaches production environments.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+      </div>
+
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 05</h3>
+        <h2 class="title-h3 main-heading heading">Launch & Optimization</h2>
+        <p>Strategic deployment ensures flawless performance from day one, with continuous monitoring and optimization for sustained excellence.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+      </div>
+
+      <div class="step">
+        <h3 class="title-h3 main-heading">STEP 06</h3>
+        <h2 class="title-h3 main-heading heading">Ongoing Partnership</h2>
+        <p>Your success is our success. We provide ongoing support, enhancements, and strategic guidance to ensure continued competitive advantage.</p>
+        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+      </div>
+    </div>
+  </div>
     </section>
 
     <!-- List Offer -->

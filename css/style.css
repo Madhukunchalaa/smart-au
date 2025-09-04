@@ -4213,3 +4213,133 @@ margin-top: 7rem;
   .badge-arrow { width: 48px; height: 48px; }
 }
 
+
+ .containers {
+      display: flex;
+      min-height: 100vh;
+      background-color: #000;
+    }
+
+         /* Left fixed side */
+    .left {
+      flex: 1;
+      padding: 60px 40px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .section-description .title-h2{
+        color: white;
+    }
+    .heading{
+        color: white;
+    }
+
+    .how-work-circle {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s 0.4s forwards;
+}
+
+.how-work-circle:hover {
+    transform: scale(1.05);
+}
+
+.how-work-circle svg {
+    width: 100%;
+    height: 100%;
+    animation: rotate 20s linear infinite;
+}
+
+.how-work-circle svg text {
+    fill: #ff7062;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.how-work-circle svg path {
+    fill: none;
+    stroke-width: 2;
+}
+
+.fa-arrow-right {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #fff;
+    animation: rotate 20s linear infinite; 
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+    /* Right steps side */
+    .right {
+      flex: 2;
+      padding: 60px 40px;
+    }
+
+    .step {
+      margin-bottom: 60px;
+    }
+
+    .step h3 {
+      color: #ff7062;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .step h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .step p {
+      font-size: 15px;
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .step img {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 15px;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .left {
+        height: auto;
+        position: relative;
+      }
+    }
+
