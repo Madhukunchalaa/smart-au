@@ -4220,7 +4220,7 @@ margin-top: 7rem;
  .containers {
       display: flex;
       min-height: 100vh;
-      background-color: #000;
+     
     }
 
          /* Left fixed side */
@@ -4235,10 +4235,10 @@ margin-top: 7rem;
       justify-content: center;
     }
     .section-description .title-h2{
-        color: white;
+        color: black;
     }
     .heading{
-        color: white;
+        color: black;
     }
 
     .how-work-circle {
@@ -4280,7 +4280,7 @@ margin-top: 7rem;
     left: 40%;
     transform: translate(-50%, -50%);
     font-size: 40px;
-    color: #fff;
+    color:#ff7062 ;
     animation: rotate 20s linear infinite; 
     pointer-events: none;
 }
@@ -4323,7 +4323,7 @@ margin-top: 7rem;
 
     .step p {
       font-size: 15px;
-      color: #ccc;
+      color: black;
       margin-bottom: 20px;
     }
 
