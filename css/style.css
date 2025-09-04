@@ -4104,3 +4104,112 @@ margin-top: 7rem;
 
 /* Legacy flip card styles removed */
 
+/* =========================
+   Methodology (process) UI
+   ========================= */
+.section-methodology {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  background: #0b0b0b;
+}
+
+.section-methodology .title-h2,
+.section-methodology .after-title,
+.section-methodology .before-title {
+  color: #ffffff;
+}
+
+.process-left {
+  position: sticky;
+  top: 120px;
+}
+
+.rotating-badge {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin-top: 3rem;
+}
+
+.rotating-text {
+  width: 180px;
+  height: 180px;
+  fill: #a0ffa6; /* light accent */
+  animation: rotateBadge 14s linear infinite;
+}
+
+.badge-text {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.badge-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #0b0b0b;
+  background: #a0ffa6;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+@keyframes rotateBadge {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.process-right {
+  background: linear-gradient(135deg, rgba(160,255,166,0.08), rgba(255,112,98,0.06));
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.process-scroll {
+  max-height: 680px;
+  overflow-y: auto;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+}
+.process-scroll::-webkit-scrollbar { width: 6px; }
+.process-scroll::-webkit-scrollbar-thumb { background: #ff7062; border-radius: 6px; }
+
+.process-card {
+  background: radial-gradient(1200px 400px at 20% 10%, rgba(160,255,166,0.12), transparent 60%), #121212;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  color: #e9e9e9;
+  padding: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.process-card-head { margin-bottom: 0.6rem; }
+.step-kicker { color: #a0ffa6; font-weight: 800; letter-spacing: 1px; }
+.process-card .description { color: #cfcfcf; }
+.process-media { margin-top: 0.9rem; border-radius: 14px; overflow: hidden; }
+.process-media img { width: 100%; display: block; }
+
+@media (max-width: 991.98px) {
+  .process-left { position: static; margin-bottom: 2rem; }
+  .process-scroll { max-height: none; }
+}
+
+@media (max-width: 575.98px) {
+  .rotating-badge { width: 140px; height: 140px; }
+  .rotating-text { width: 140px; height: 140px; }
+  .badge-text { font-size: 12px; }
+  .badge-arrow { width: 48px; height: 48px; }
+}
+
