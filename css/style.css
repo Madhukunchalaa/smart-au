@@ -1350,11 +1350,6 @@ margin-top: 7rem;
   align-items: center;
 }
 
-
-
-
-
-
 /* Work */
       .section-work {
             background-color: #f7f7f7;
@@ -2220,7 +2215,7 @@ margin-top: 7rem;
 .line-clamp {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  /* -webkit-line-clamp: 2; */
   -webkit-box-orient: vertical; }
 
 /* Contact Info */
@@ -4334,7 +4329,6 @@ margin-top: 7rem;
       border-radius: 15px;
       display: block;
     }
-
     /* Responsive */
     @media (max-width: 900px) {
       .container {
