@@ -25,6 +25,180 @@
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+     <style>
+     .achievements-section {
+            padding-top: 3rem;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: #ff7062;
+            font-weight: 600;
+        }
+
+        .decades{
+            display: flex;
+            gap:15px;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid #ff7062;
+            border-radius: 16px;
+            padding: 1rem;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .achievement-card:hover {
+            border-color: #ff7062;
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(126, 211, 33, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: none;
+            background-color: transparent;
+            justify-content: space-between;
+        }
+
+        .achievement-icon {
+            color: #ff7062;
+            margin-top: -5px;
+            font-size: 1.8rem;
+        }
+
+        .achievement-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+             font-family: "Nova Flat";
+            margin-bottom: 0.5rem;
+            color: white;
+            flex: 1;
+        }
+
+        .achievement-year {
+            color: #ff7062;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-left: 1rem;
+        }
+
+        .achievement-preview {
+            color: #cccccc;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-left: 20px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-preview.expanded {
+            -webkit-line-clamp: unset;
+            max-height: none;
+        }
+
+        .expand-btn {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            color: #ff7062;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            margin-left: auto;
+        }
+
+        .expand-btn:hover {
+            background: rgba(255, 112, 98, 0.8);
+            color: white;
+
+        }
+
+        .expand-arrow {
+            margin-left: 0.5rem;
+            font-size: 1.2rem;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .achievement-card.expanded .expand-arrow {
+            transform: rotate(45deg);
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff7062, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .achievement-card:hover::before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .achievements-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .achievement-card {
+                padding: 2rem;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .achievement-year {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -260,42 +434,42 @@
         <h3 class="title-h3 main-heading">STEP 01</h3>
         <h2 class="title-h3 main-heading heading">Discovery & Strategic Planning </h2>
         <p>We immerse ourselves in your business ecosystem, understanding your goals, challenges, and market position to craft a comprehensive transformation roadmap.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+        <img src="img/step1.png" alt="">
       </div>
 
       <div class="step">
         <h3 class="title-h3 main-heading">STEP 02</h3>
         <h2 class="title-h3 main-heading heading">Architecture & Design </h2>
         <p>Our senior architects design scalable, secure solutions that anticipate future needs while solving today's challenges with elegant efficiency.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-2.jpg" alt="">
+        <img src="img/step2.png" alt="">
       </div>
 
       <div class="step">
         <h3 class="title-h3 main-heading">STEP 03</h3>
         <h2 class="title-h3 main-heading heading">Development & Engineering </h2>
         <p>Rigorous development practices ensure every component meets our exacting standards for quality, security, and performance excellence.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-3.jpg" alt="">
+        <img src="img/step3.png" alt="">
       </div>
 
       <div class="step">
         <h3 class="title-h3 main-heading">STEP 04</h3>
         <h2 class="title-h3 main-heading heading">Testing & Quality Assurance</h2>
         <p>Comprehensive testing protocols validate functionality, performance, and security before any solution reaches production environments.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+        <img src="img/step4.png" alt="">
       </div>
 
       <div class="step">
         <h3 class="title-h3 main-heading">STEP 05</h3>
         <h2 class="title-h3 main-heading heading">Launch & Optimization</h2>
         <p>Strategic deployment ensures flawless performance from day one, with continuous monitoring and optimization for sustained excellence.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+        <img src="img/step5.png" alt="">
       </div>
 
       <div class="step">
         <h3 class="title-h3 main-heading">STEP 06</h3>
         <h2 class="title-h3 main-heading heading">Ongoing Partnership</h2>
         <p>Your success is our success. We provide ongoing support, enhancements, and strategic guidance to ensure continued competitive advantage.</p>
-        <img src="https://demo.awaikenthemes.com/artistics/it-company/wp-content/uploads/2025/01/how-work-process-img-1.jpg" alt="">
+        <img src="img/step6.png" alt="">
       </div>
     </div>
   </div>
@@ -303,42 +477,104 @@
 
     <!-- List Offer -->
 
-    <section class="section section-list-offer">
-        <div class="container">
-
-            <p class="before-title text-center">Why XXXXXX(WebXDesign)</p>
+     <section class="achievements-section">
+            <p class="before-title text-center">Why WebXDesign</p>
             <h2 class="title-h2 text-center">Two Decades of Digital Mastery</h2>
-            <div class="box-offer">
-                <div class="col-offer">
-                    <h3 class="title-h3">Proven Excellence</h3>
-                    <p class="description line-clamp">Twenty years of successful transformations across industries, from ambitious startups to Fortune 500 enterprises.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+        <div class="achievements-grid">
+            <div class="achievement-card">
+                <div class="card-header">
+                    <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Proven Excellence</h3>
+                    </div>
                 </div>
-                <div class="col-offer">
-                    <h3 class="title-h3">Senior-Level Expertise</h3>
-                    <p class="description line-clamp">Every project is handled by senior professionals with deep technical knowledge and strategic understanding.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+                <p class="achievement-preview">
+                   Twenty years of successful transformations across industries, from ambitious startups to Fortune 500 enterprises.
+                </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
+            </div>
+
+            <div class="achievement-card">
+                <div class="card-header">
+                   <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Senior-Level Expertise </h3>
+                    </div>
                 </div>
-                <div class="col-offer">
-                    <h3 class="title-h3">Innovation-First Approach </h3>
-                    <p class="description line-clamp">We don't just implement existing solutions—we engineer new possibilities that position you ahead of the competition.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+                <p class="achievement-preview">
+                    Every project is handled by senior professionals with deep technical knowledge and strategic understanding.
+                </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
+            </div>
+
+            <div class="achievement-card">
+                <div class="card-header">
+                    <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Innovation-First Approach</h3>
+                    </div>
                 </div>
-                <div class="col-offer">
-                    <h3 class="title-h3">Comprehensive Partnership</h3>
-                    <p class="description line-clamp">From initial strategy through long-term growth, we're your dedicated technology partners committed to your sustained success.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+                <p class="achievement-preview">
+                    We don't just implement existing solutions—we engineer new possibilities that position you ahead of the competition.                
+                </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
+            </div>
+
+            <div class="achievement-card">
+                <div class="card-header">
+                    <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Comprehensive Partnership </h3>
+                    </div>
                 </div>
-                <div class="col-offer">
-                    <h3 class="title-h3">Measurable Results</h3>
-                    <p class="description line-clamp">Our solutions deliver quantifiable improvements in performance, efficiency, and business outcomes.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+                <p class="achievement-preview">
+                   From initial strategy through long-term growth, we're your dedicated technology partners committed to your sustained success.               
+                 </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
+            </div>
+
+            <div class="achievement-card">
+                <div class="card-header">
+                    <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Measurable Results</h3>
+                    </div>
                 </div>
-                <div class="col-offer">
-                    <h3 class="title-h3">Future-Ready Technology</h3>
-                    <p class="description line-clamp">We build solutions that evolve with your business, ensuring your technology investment continues delivering value over time.</p>
-                    <a class="btn-text btn-text-img" href="#">More</a>
+                <p class="achievement-preview">
+                     Our solutions deliver quantifiable improvements in performance, efficiency, and business outcomes.           
+                </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
+            </div>
+
+            <div class="achievement-card">
+                <div class="card-header">
+                    <div class="decades">
+                        <div class="achievement-icon">✱</div>
+                        <h3 class="achievement-title">Future-Ready Technology</h3>
+                    </div>
                 </div>
+                <p class="achievement-preview">
+                   We build solutions that evolve with your business, ensuring your technology investment continues delivering value over time.        
+                </p>
+                <button class="expand-btn" onclick="toggleCard(this)">
+                    <span>More</span>
+                    <span class="expand-arrow">↗</span>
+                </button>
             </div>
         </div>
     </section>
@@ -459,7 +695,7 @@
                             <ul class="nav justify-content-end">
                                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="index.html#our-services">Our Services </a></li>
+                                <li class="nav-item"><a class="nav-link" href="services.html">Our Services </a></li>
                                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
                               </ul>
@@ -535,6 +771,52 @@
             </div>
         </div>
     </footer>
+    <script>
+        function toggleCard(button) {
+            const card = button.closest('.achievement-card');
+            const preview = card.querySelector('.achievement-preview');
+            const arrow = button.querySelector('.expand-arrow');
+            const buttonText = button.querySelector('span:first-child');
+            
+            const isExpanded = card.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse - show only 2 lines
+                card.classList.remove('expanded');
+                preview.classList.remove('expanded');
+                buttonText.textContent = 'More';
+            } else {
+                // Expand - show full content
+                card.classList.add('expanded');
+                preview.classList.add('expanded');
+                buttonText.textContent = 'Show Less';
+            }
+        }
+
+        // Add smooth scrolling and enhanced interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.achievement-card');
+            
+            // Add intersection observer for animation on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -545,9 +827,7 @@
 	<!-- Plugins -->
 	<script src="js/plugins.js"></script>
 
-	<script>
-		// Flip-card interaction removed for new static layout
-	</script>
+	
 
 </body>
 
