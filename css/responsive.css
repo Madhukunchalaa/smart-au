@@ -617,7 +617,7 @@ Tags: powerful, host
     .breadcrumb {padding: 0;}
     .section-banner__box {display: none;}
     .social-networks {display: none;}
-    .section-about {padding-top: 7rem;}
+    .section-about {padding-top: 3rem;}
     .sidebar-item {margin-top: 3rem;}
     .section-description {padding-bottom: 4rem;}
     .container {margin: 0;}
@@ -633,7 +633,7 @@ Tags: powerful, host
 
 
 @media only screen and (max-width: 991px) {
-    .section-reason {padding-bottom: 5rem;padding-top: 0;}
+    .section-reason {padding-bottom: 5rem;padding-top: 4rem;}
     .navbar-light .navbar-nav .nav-link {padding-left: 0;padding-right: 0;}
     .navbar-nav .dropdown-menu {display: none; opacity: 1; visibility: visible; transform: inherit; }
     .container {max-width: 100%;padding: 0 15px;}
@@ -645,7 +645,7 @@ Tags: powerful, host
     .section-work {padding-bottom: 3rem;}
     .section-services {padding: 7rem 0;}
     .sidebar-item.sidebar-category {padding-top: 2rem;}
-    .section-description {padding-top: 6rem;}
+    .section-description {padding-top: 2rem;padding-bottom: 0;}
     .box-case.box-case--static .row-cols-3 > * {max-width: 50%;flex: 0 0 50%;margin-bottom: 30px;}
     .box-case.box-case--static .row {margin-bottom: -30px;}
     .section-client, .section-list-offer, .section-offer, .section-services {padding: 6rem 0;}
@@ -664,14 +664,14 @@ Tags: powerful, host
 
 @media only screen and (max-width: 768px) {
     .section-count {padding-bottom: 7rem;}
-    .section-feedback {padding: 7rem 0;}
+    .section-feedback {padding: 4rem 0;}
     .section-team {padding: 7rem 0;}
     .col-offer:last-child {margin-bottom: 0;padding-bottom: 0;}
     .col-services:last-child {margin-bottom: 0;}
     .col-offer {margin-left: 0;margin-right: 0;}
     .carousel-control-prev {right: 72px;}
     .section-portfolio-work {padding-top: 6rem;}
-    .section-contact {padding-bottom: 2rem;}
+    .section-contact {padding-bottom: 2rem;padding-top: 3rem;}
     .row-blog {margin-top: 0;}
     .row-count {padding-bottom: 0;}
     .banner-carousel .owl-nav {bottom: 0;}
@@ -711,10 +711,9 @@ Tags: powerful, host
     .banner-carousel-item {text-align: center;}
     .section-about {text-align: center;}
     .img-about {justify-content: center;}
-    .section-services {text-align: center;}
+    .section-services {text-align: center; padding-top: 3rem; padding-bottom: 0;}
     .section-case {text-align: center;}
     .section-blog .col-post {text-align: center;}
-    .title-h2 {margin-bottom: 50px;}
 }
 
 

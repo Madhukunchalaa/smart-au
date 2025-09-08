@@ -193,7 +193,6 @@ a:hover {
 
 /* Header */
 .header {
-  border-bottom: 1px solid #eeeeee;
   position: absolute;
   width: 100%;
   top: 0;
@@ -642,7 +641,10 @@ margin-top: 7rem;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      margin-bottom: 2rem; } }
+      margin-bottom: 2rem; }
+    #about-us{
+      margin-top: 0;
+    } }
   .img-about-item {
     position: absolute;
     left: 0;
@@ -1373,7 +1375,7 @@ margin-top: 7rem;
         @media (max-width: 991.98px) {
             .section-invest {
                 padding-top: 30px;
-                padding-bottom: 6.5rem;
+                padding-bottom: 2rem;
             }
         }
         .section-invest .before-title::before {
