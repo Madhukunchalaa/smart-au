@@ -519,7 +519,10 @@ a:hover {
     @media (max-width: 991.98px) {
       .banner-carousel .owl-prev, .banner-carousel .owl-next {
         width: 60px;
-        height: 60px; } }
+        height: 60px; }
+      #banner-no2{
+        bottom:0!important; }
+      }
   .banner-carousel .owl-prev {
     background-image: url(../img/return.svg); }
   .banner-carousel .owl-next {
@@ -541,12 +544,16 @@ a:hover {
       font-size: 11.85rem;
       left: inherit;
       right: 30px;
-      bottom: 100px; } }
+      bottom: 75px; }
+    #banner-no2{
+     bottom:65px!important; } }
   @media (max-width: 575.98px) {
     .carousel-number {
       font-size: 3.85rem;
-      right: 15px; } }
-
+      right: 15px; }
+    #banner-no2{
+     bottom:75px!important;  }
+    }
 .box-banner {
   position: absolute;
   right: 0;
@@ -558,7 +565,11 @@ a:hover {
       width: 50%; } }
   @media (max-width: 1199.98px) {
     .box-banner {
-      display: none; } }
+      display: none; } 
+      #banner-no2{
+     bottom:auto;  }
+    
+    }
 
 .thumb-banner {
   width: 100%;
@@ -972,7 +983,7 @@ margin-top: 7rem;
 .service-feature .feature-subtitle {
   margin-top: 14px;
   font-size: 1.2rem;
-  font-family: "Nova Flat";
+  font-weight: 600;
   margin-bottom: 10px;
   color: #222222;
 }
@@ -985,6 +996,7 @@ margin-top: 7rem;
 }
 .description{
   font-size: 1.21rem;
+  margin-top: 10px;
 }
 .main-heading{
   font-weight: 600;
@@ -1056,10 +1068,11 @@ margin-top: 7rem;
     font-size: 1.21rem;
     line-height: 1.8;
     margin-bottom: 1.5rem; }
+    
 
 /* Offer */
 .section-offer {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
             url(../img/tech-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -1350,42 +1363,36 @@ margin-top: 7rem;
   align-items: center;
 }
 
-/* Work */
-      .section-work {
+/* investment*/
+      .section-invest {
             background-color: #f7f7f7;
             position: relative;
-            padding-top: 9.8rem;
-            padding-bottom: 12rem;
+            padding-top: 5.8rem;
+            padding-bottom: 3rem;
         }
         @media (max-width: 991.98px) {
-            .section-work {
+            .section-invest {
                 padding-top: 30px;
                 padding-bottom: 6.5rem;
             }
         }
-        .section-work .before-title::before {
+        .section-invest .before-title::before {
             background-image: url(img/logo/logo-shape-white.svg);
         }
-        .section-work .title-h2 {
+        .section-invest .title-h2 {
             line-height: 1.2;
             margin-bottom: 2.1rem;
         }
-        .section-work .after-title {
+        .section-invest .after-title {
             font-size: 1.57rem;
             line-height: 1.5;
             margin-bottom: 1.5rem;
         }
-        .section-work .description {
+        .section-invest .description {
             font-size: 1.21rem;
             line-height: 1.8;
         }
-        .images-work {
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 56%;
-        }
+       
         @media (max-width: 991.98px) {
             .images-work {
               display: none;
@@ -1419,13 +1426,7 @@ margin-top: 7rem;
             height: 40%;
             z-index: 2;
         }
-        .work-image-3 {
-            bottom: 3%;
-          left: 13%;
-          width: 38%;
-          height: 40%;
-            z-index: 1;
-        }
+        
         @media (max-width: 991.98px) {
             .work-image-1 {
                 top: 5%;
@@ -1513,6 +1514,67 @@ margin-top: 7rem;
         color: #ff7062;
 
       }
+
+  .images-work {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 115%;
+    width: 56%;
+}
+
+@media (max-width: 991.98px) {
+    .images-work {
+        display: none;
+    }
+}
+
+.work-image {
+    position: absolute;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.work-image-1 {
+    top: 15%;
+    left: 8%;
+    width: 45%;
+    height: 50%;
+    z-index: 1;
+}
+.work-image-2 {
+    bottom: 10%;
+    right: 3%;
+    width: 50%;
+    height: 55%;
+    z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+    .work-image-1 {
+        top: 5%;
+        left: 10%;
+        width: 40%;
+        height: 45%;
+    }
+    .work-image-2 {
+        bottom: 5%;
+        right: 10%;
+        width: 45%;
+        height: 50%;
+    }
+}
+
 
 
 
@@ -4034,7 +4096,7 @@ margin-top: 7rem;
 .section-description {
  padding-top: 5.5rem;
     background-color: rgb(247, 247, 247);
-    padding-bottom: 3.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .owl-carousel .owl-item .client-carousel-item img {
@@ -4100,9 +4162,7 @@ margin-top: 7rem;
 }
 
 
-/* Legacy flip card styles removed */
-
-/* =========================
+/* 
    Methodology (process) UI
    ========================= */
 .section-methodology {
@@ -4231,6 +4291,7 @@ margin-top: 7rem;
     }
     .section-description .title-h2{
         color: black;
+        font-size: 45px;
     }
     .heading{
         color: black;
@@ -4293,12 +4354,9 @@ margin-top: 7rem;
 }
 
 
-
-
-    /* Right steps side */
     .right {
       flex: 2;
-      padding: 60px 40px;
+      padding: 20px 40px;
     }
 
     .step {
@@ -4307,7 +4365,7 @@ margin-top: 7rem;
 
     .step h3 {
       color: #ff7062;
-      font-size: 16px;
+      font-size: 20px;
       margin-bottom: 10px;
     }
 
