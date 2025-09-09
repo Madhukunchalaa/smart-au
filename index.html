@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-    <title>Desart - Creative Web Studio HTML Template</title>
+    <title>webx</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desart Creative Web Design Studio" />
     <meta name="author" content="George_fx">
@@ -12,13 +12,24 @@
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/ico" href="img/favicon.ico">
-
+    
 	<!-- Animation CSS File -->
     <link href="css/animate.css" rel="stylesheet">
     <!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font Awesome -->
 	<link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 Free (CSS) -->
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+    />
+    
+    <script src="https://kit.fontawesome.com/2097aac339.js" crossorigin="anonymous"></script>
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -29,6 +40,16 @@
 	<!-- Custom Style -->
     <link href="css/style.css" rel="stylesheet">
 	<link href="css/responsive.css" rel="stylesheet">
+    
+
+    <!-- Font Awesome 6 Free (CSS) -->
+<link 
+  rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+  crossorigin="anonymous" 
+  referrerpolicy="no-referrer" 
+/>
     
 
 
@@ -46,8 +67,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="navbar-brand" href="index.html">
-    
-                        <h1 class="logo-design">WEB<span class="design-x">X</span></h1>
+                        <img class="logo" src="img/logo.png" alt="Desart">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -61,10 +81,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.html">About</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Services
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarServices">
+                                <a class="dropdown-item" href="services.html">Service</a>
+                                <a class="dropdown-item" href="services-detail.html">Service Details</a>
+                            </div>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link" href="portfolio.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
@@ -141,7 +167,8 @@
     </div>
     
     <!-- About Us -->
-	<section class="section section-about" id="about-us">
+	<!-- <section class="section section-about" id="about-us">
+
 		<div class="container">
 			<div class="row justify-content-between">
 				<div class="col-xl-7 col-md-6 col-sm-12 col-12">
@@ -171,7 +198,75 @@
 				</div>
 			  </div>
         </div>
-	</section>
+	</section> -->
+<section class="section section-about" id="about-us">
+  <div class="container">
+    <div class="row justify-content-between">
+      <!-- Left Side (Image Layout) -->
+      <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+        <div class="img-about">
+          <div class="img-about-item">
+            <div class="thumb-back">
+              <img class="thumb-back-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Bg-1.jpg" alt="Team Meeting">
+            </div>
+          </div>
+          <div>
+            <div class="thumb-front wow fadeInUp" data-wow-duration="1000ms">
+              <img class="thumb-front-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Project1-400x532.jpg" alt="Office Setup">
+            </div>
+          </div>
+          <div class="box-about-text">
+            <p><span>15+</span>Years of experience</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Side (Text + Content Layout Like Image Style) -->
+      <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+        <p class="before-title scnd">ABOUT THE COMPANY</p>
+        <h2 class="title-h2">We provide the best IT solutions services</h2>
+        <p class="description">IT solutions encompass a range of technologies and services designed to address specific business needs, such as network security, cloud computing, and software development.</p>
+
+        <div class="service-box">
+          <div class="service-item">
+            <p><img src="img/team.png" alt="">
+            </p>
+            <h4>End to end development</h4>
+          </div>
+          <div class="service-item">
+            <p><img src="img/software-source.png" alt="">
+            </p>
+           
+            <h4>Software IT Outsource</h4>
+          </div>
+        </div>
+
+        <p class="description">We focus on your growth by ensuring technology empowers, not hinders your business success.</p>
+    
+        <div class="cta-box">
+          <div class="call-info">
+          <i class="fa-solid fa-phone-volume"></i>
+            <p>Call us anytime<br><strong>+88 017 500 500 88</strong></p>
+          </div>
+          <a href="#" class="btn-discover"><i class="fa-solid fa-chevron-right"></i>Discover More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Count -->
     <section class="section section-count">
@@ -224,25 +319,25 @@
                 <img src="img/service1.png" alt="">
                 <h3 class="title-h3">Custom Web Development </h3>
                 <p class="description">Transform your digital presence with bespoke solutions engineered for performance, scalability, and user engagement that converts.</p>
-                <a class="btn-text btn-text-img" href="services.html">Read more</a>
+                <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
             </div>
             <div class="col-services col-services-center">
                 <img src="img/service2.png" alt="">
                 <h3 class="title-h3">Enterprise Applications</h3>
                 <p class="description">Complex challenges demand sophisticated solutions. We build enterprise-grade systems that streamline operations and accelerate growth.</p>
-                <a class="btn-text btn-text-img" href="services.html">Read more</a>
+                <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
             </div>
             <div class="col-services">
                 <img src="img/service3.png" alt="">
                 <h3 class="title-h3">Digital Transformation</h3>
                 <p class="description">Navigate the digital landscape with confidence. Our comprehensive transformation strategies position your business for sustained success.</p>
-                <a class="btn-text btn-text-img" href="services.html">Read more</a>
+                <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
             </div>
              <div class="col-services col-services-center">
                 <img src="img/service4.png" alt="">
                 <h3 class="title-h3">Innovation Consulting</h3>
                 <p class="description">Unlock untapped potential with strategic guidance from industry veterans who've shaped the digital evolution of countless businesses.</p>
-                <a class="btn-text btn-text-img" href="services.html">Read more</a>
+                <a class="btn-text btn-text-img" href="services-detail.html">Read more</a>
             </div>
             </div>
         </div>
@@ -587,7 +682,7 @@
                         <a href="blog-single.html">Discovery & Strategy</a>
                     </h3>
                     <p class="description line-clamp">We immerse ourselves in your business, understanding your goals, challenges, and vision to craft a roadmap for success.</p>
-                    
+                    <a class="btn-text btn-text-img" href="blog-single.html">Read more</a>
                 </div>
                 <div class="col-post col-post-center">
                     <div class="thumb-blog thumb-blog-2">
@@ -596,7 +691,7 @@
                         <a href="blog-single.html">Design & Architecture</a>
                     </h3>
                     <p class="description line-clamp">Our senior architects design scalable, secure solutions that grow with your business and exceed performance expectations.</p>
-                    
+                    <a class="btn-text btn-text-img" href="blog-single.html">Read more</a>
                 </div>
                 <div class="col-post">
                     <div class="thumb-blog thumb-blog-3">
@@ -605,7 +700,7 @@
                         <a href="blog-single.html">Development & Testing</a>
                     </h3>
                     <p class="description line-clamp">Rigorous development practices ensure every line of code meets our exacting standards for quality, security, and performance.</p>
-                    
+                    <a class="btn-text btn-text-img" href="blog-single.html">Read more</a>
                 </div>
                 <div class="col-post">
                     <div class="thumb-blog thumb-blog-4">
@@ -614,7 +709,7 @@
                         <a href="blog-single.html">Launch & Optimization</a>
                     </h3>
                     <p class="description line-clamp">We don't just deliver—we ensure your solution performs flawlessly from day one and continues to excel over time.</p>
-                    
+                    <a class="btn-text btn-text-img" href="blog-single.html">Read more</a>
                 </div>
             </div>
         </div>
@@ -762,7 +857,7 @@
                             <ul class="nav justify-content-end">
                                 <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
                                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="services.html">Our Services </a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html#our-services">Our Services </a></li>
                                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                                 <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
                               </ul>
@@ -788,12 +883,12 @@
                                 Services
                             </h3>
                             <ul class="list-services">
-                                <li class="list-services-item"><a class="list-services-link" href="services.html">Web Development </a></li>
-                                <li class="list-services-item"><a class="list-services-link" href="services.html">Mobile Applications</a></li>
-                                <li class="list-services-item"><a class="list-services-link" href="services.html">Enterprise Solutions</a></li>
-                                <li class="list-services-item"><a class="list-services-link" href="services.html">Cloud Migration</a></li>
-                                <li class="list-services-item"><a class="list-services-link" href="services.html">Technical Consulting </a></li>
-                               <li class="list-services-item"><a class="list-services-link" href="services.html">Digital Strategy</a></li>
+                                <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Web Development </a></li>
+                                <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Mobile Applications</a></li>
+                                <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Enterprise Solutions</a></li>
+                                <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Cloud Migration</a></li>
+                                <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Technical Consulting </a></li>
+                               <li class="list-services-item"><a class="list-services-link" href="services-detail.html">Digital Strategy</a></li>
                             </ul>
                         </div>
                         <div class="col-xl-3 col-md-6 col-sm-6 col-12">
