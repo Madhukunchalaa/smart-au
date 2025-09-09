@@ -2276,13 +2276,7 @@ margin-top: 7rem;
 
 .line-clamp {
   overflow: hidden;
-<<<<<<< HEAD
-  /* display: -webkit-box;
-  -webkit-line-clamp: 2; */
-=======
   display: -webkit-box;
-  /* -webkit-line-clamp: 2; */
->>>>>>> aae66a243365790877a5e428fdbc459b67e22940
   -webkit-box-orient: vertical; }
 
 /* Contact Info */
