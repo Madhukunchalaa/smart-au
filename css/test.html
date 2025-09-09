@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements Section</title>
+    <title>About Section Layout</title>
     <style>
         * {
             margin: 0;
@@ -12,337 +12,445 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            min-height: 100vh;
-            padding: 2rem 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
         }
 
-        .achievements-section {
-            max-width: 1400px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 15px;
         }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .highlight {
-            color: #7ed321;
-            font-weight: 600;
-        }
-
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .achievement-card {
-            background: rgba(30, 30, 30, 0.8);
-            border: 1px solid rgba(126, 211, 33, 0.2);
-            border-radius: 16px;
-            padding: 2.5rem;
-            position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-        .achievement-card:hover {
-            border-color: rgba(126, 211, 33, 0.5);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(126, 211, 33, 0.1);
-        }
-
-        .card-header {
+        .row {
             display: flex;
-            align-items: flex-start;
             justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        .section-about {
+            padding-top: 4.28rem;
+        }
+
+        #about-us {
+            margin-top: 7rem;
+        }
+
+        @media (max-width: 991.98px) {
+            .section-about {
+                padding-top: 10rem;
+            }
+        }
+
+        .section-about .title-h2 {
+            line-height: 1.2;
+            margin-bottom: 1.3rem;
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: 700;
+        }
+
+        .section-about .after-title {
+            font-size: 1.57rem;
+            line-height: 1.5;
             margin-bottom: 1.5rem;
         }
 
-        .achievement-icon {
-            color: #7ed321;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .section-about .description {
+            font-size: 1.21rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1.5rem;
         }
 
-        .achievement-title {
-            font-size: 1.5rem;
+        .section-about .text-description {
+            font-size: 1.21rem;
+            line-height: 1.8;
+            margin-bottom: 1.4rem;
+            color: #666;
+        }
+
+        .before-title {
+            text-transform: uppercase;
+            color: #ff7062;
             font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        /* Image Layout */
+        .col-xl-7 {
+            flex: 0 0 58.33%;
+            max-width: 58.33%;
+        }
+
+        .col-xl-5 {
+            flex: 0 0 41.67%;
+            max-width: 41.67%;
+            padding-left: 2rem;
+        }
+
+        .img-about {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            height: 650px;
+            width: 100%;
+        }
+
+        @media (max-width: 767.98px) {
+            .img-about {
+                justify-content: flex-start;
+                margin-bottom: 2rem;
+                height: 300px;
+            }
+            #about-us {
+                margin-top: 0;
+            }
+            .col-xl-7, .col-xl-5 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .col-xl-5 {
+                padding-left: 0;
+                margin-top: 2rem;
+            }
+        }
+
+        .img-about-item {
+            position: absolute;
+            left: 0;
+            z-index: 1;
+        }
+
+        @media (max-width: 991.98px) {
+            .img-about-item {
+                display: none;
+            }
+        }
+
+        .thumb-back {
+            width: 550px;
+            height: 635px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .thumb-back-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .thumb-front {
+            width: 229px;
+            height: 327px;
+            position: absolute;
+            top: 115px;
+            right: 105px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+            border: 5px solid white;
+            transform: rotate(10deg);
+            transition-duration: 5000ms;
+        }
+
+        .thumb-front:hover {
+            transform: scale(0.9);
+        }
+
+        @media (max-width: 767.98px) {
+            .thumb-front {
+                width: 280px;
+                height: 350px;
+                position: relative;
+                top: 0;
+                transform: rotate(0deg);
+            }
+        }
+
+        .thumb-front {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumb-front::before {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            display: block;
+            content: "";
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.75s ease;
+            z-index: 2;
+        }
+
+        .thumb-front:hover::before {
+            left: 120%;
+        }
+
+        .thumb-front-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .box-about-text {
+            position: absolute;
+            bottom: -50px;
+            left: -98px;
+            background: rgb(227, 34, 34);
             color: white;
+            padding: 42px 25px;
+            border-radius: 20px;
+            z-index: 4;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        @media (max-width: 767.98px) {
+            .box-about-text {
+                bottom: 10px;
+                left: 10px;
+                padding: 20px 25px;
+                transform: rotate(0deg);
+            }
+        }
+
+        .box-about-text p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .box-about-text span {
+            font-size: 3.5rem;
+            font-weight: 900;
+            display: block;
+            line-height: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .btn-play {
+            display: inline-block;
+            color: #ff7062;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .btn-play::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ff7062;
+            transition: width 0.3s ease;
+        }
+
+        .btn-play:hover::after {
+            width: 100%;
+        }
+
+        .btn-play:hover {
+            color: #e55a4c;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .col-xl-7, .col-xl-5 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .img-about {
+                justify-content: center;
+                height: 400px;
+            }
+            
+            .thumb-front {
+                width: 400px;
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .thumb-front {
+                width: 280px;
+                height: 350px;
+            }
+            
+            .box-about-text {
+                bottom: 15px;
+                left: 15px;
+                padding: 15px 20px;
+            }
+            
+            .box-about-text span {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .service-box {
+            display: flex;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .service-item {
+            text-align: center;
             flex: 1;
         }
 
-        .achievement-year {
-            color: #7ed321;
-            font-size: 0.9rem;
-            font-weight: 500;
-            background: rgba(126, 211, 33, 0.1);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            margin-left: 1rem;
+        .service-item img {
+            width: 60px;
+            margin-bottom: 0.8rem;
         }
 
-        .achievement-preview {
-            color: #cccccc;
+        .service-item h4 {
             font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            transition: all 0.3s ease;
+            font-weight: 600;
+            color: #333;
         }
 
-        .achievement-preview.expanded {
-            -webkit-line-clamp: unset;
-            max-height: none;
-        }
-
-        .expand-btn {
+        .cta-box {
             display: flex;
             align-items: center;
-            background: none;
-            border: none;
-            color: #7ed321;
+            justify-content: space-between;
+            margin-top: 2rem;
+        }
+
+        .call-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 1rem;
-            cursor: pointer;
-            padding: 0.5rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            margin-left: auto;
         }
 
-        .expand-btn:hover {
-            background: rgba(126, 211, 33, 0.1);
+        .call-info i {
+            color: #ff7062;
+            font-size: 1.5rem;
         }
 
-        .expand-arrow {
-            margin-left: 0.5rem;
-            font-size: 1.2rem;
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .btn-discover {
+            background: #ff7062;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
-        .achievement-card.expanded .expand-arrow {
-            transform: rotate(90deg);
-        }
-
-        .achievement-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #7ed321, transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .achievement-card:hover::before {
-            opacity: 1;
+        .btn-discover:hover {
+            background: #e55a4c;
         }
 
         @media (max-width: 768px) {
-            .achievements-grid {
-                grid-template-columns: 1fr;
+            .service-box {
+                flex-direction: column;
                 gap: 1.5rem;
             }
             
-            .section-title {
-                font-size: 2.5rem;
+            .service-item {
+                gap: 1rem;
             }
             
-            .achievement-card {
-                padding: 2rem;
+            .service-item .icon-wrapper {
+                width: 60px;
+                height: 60px;
             }
             
-            .card-header {
+            .service-item .icon-wrapper svg {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .cta-box {
                 flex-direction: column;
+                gap: 1rem;
                 align-items: flex-start;
-            }
-            
-            .achievement-year {
-                margin-left: 0;
-                margin-top: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <section class="achievements-section">
-        <div class="section-header">
-            <h2 class="section-title">
-                Celebrating our <span class="highlight">achievements</span> in<br>
-                IT excellence
-            </h2>
-        </div>
-
-        <div class="achievements-grid">
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">IT Project Delivery</h3>
+    <section class="section section-about" id="about-us">
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- Left Side (Image Layout) -->
+                <div class="col-xl-7 col-md-6 col-sm-12 col-12">
+                    <div class="img-about">
+                        <div class="img-about-item">
+                            <div class="thumb-back">
+                                <img class="thumb-back-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Bg-1.jpg" alt="Team Meeting">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="thumb-front wow fadeInUp" data-wow-duration="1000ms">
+                                <img class="thumb-front-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Project1-400x532.jpg" alt="Office Setup">
+                            </div>
+                        </div>
+                        <div class="box-about-text">
+                            <p><span>15+</span>Years of experience</p>
+                        </div>
                     </div>
-                    <span class="achievement-year">[2019]</span>
                 </div>
-                <p class="achievement-preview">
-                    Twenty years of successful transformations across industries, from ambitious startups to Fortune 500 enterprises.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">→</span>
-                </button>
-            </div>
 
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">Technology Integration</h3>
-                    </div>
-                    <span class="achievement-year">[2020]</span>
-                </div>
-                <p class="achievement-preview">
-                    Every project is handled by senior professionals with deep technical knowledge and strategic understanding.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">↗</span>
-                </button>
-            </div>
+                <!-- Right Side (Text + Content Layout) -->
+                <div class="col-xl-5 col-md-5 col-sm-12 col-12">
+                    <p class="before-title scnd">ABOUT THE COMPANY</p>
+                    <h2 class="title-h2">We provide the best IT solutions services</h2>
+                    <p class="description">IT solutions encompass a range of technologies and services designed to address specific business needs, such as network security, cloud computing, and software development.</p>
 
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">ERP Solution</h3>
+                    <div class="service-box">
+                        <div class="service-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Development">
+                            <h4>End to End Development</h4>
+                        </div>
+                        <div class="service-item">
+                            <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Outsource">
+                            <h4>Software IT Outsource</h4>
+                        </div>
                     </div>
-                    <span class="achievement-year">[2021]</span>
-                </div>
-                <p class="achievement-preview">
-                    We don't just implement existing solutions—we engineer new possibilities that position you ahead of the competition.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">↗</span>
-                </button>
-            </div>
 
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">Digital Transformation Leader</h3>
-                    </div>
-                    <span class="achievement-year">[2022]</span>
-                </div>
-                <p class="achievement-preview">
-                    From initial strategy through long-term growth, we're your dedicated technology partners committed to your sustained success.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">↗</span>
-                </button>
-            </div>
+                    <p class="text-description">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt ut labore et simply free text dolore</p>
 
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">Sustainability in Tech Award</h3>
+                    <div class="cta-box">
+                        <div class="call-info">
+                            <i class="fa fa-phone">📞</i>
+                            <p>Call us anytime<br><strong>+88 017 500 500 88</strong></p>
+                        </div>
+                        <a href="#" class="btn-discover">DISCOVER MORE</a>
                     </div>
-                    <span class="achievement-year">[2023]</span>
                 </div>
-                <p class="achievement-preview">
-                    Our solutions deliver quantifiable improvements in performance, efficiency, and business outcomes.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">↗</span>
-                </button>
-            </div>
-
-            <div class="achievement-card">
-                <div class="card-header">
-                    <div>
-                        <div class="achievement-icon">✱</div>
-                        <h3 class="achievement-title">Leadership in Cybersecurity</h3>
-                    </div>
-                    <span class="achievement-year">[2024]</span>
-                </div>
-                <p class="achievement-preview">
-                    We build solutions that evolve with your business, ensuring your technology investment continues delivering value over time.
-                </p>
-                <button class="expand-btn" onclick="toggleCard(this)">
-                    <span>More</span>
-                    <span class="expand-arrow">↗</span>
-                </button>
             </div>
         </div>
     </section>
-
-    <script>
-        function toggleCard(button) {
-            const card = button.closest('.achievement-card');
-            const preview = card.querySelector('.achievement-preview');
-            const arrow = button.querySelector('.expand-arrow');
-            const buttonText = button.querySelector('span:first-child');
-            
-            const isExpanded = card.classList.contains('expanded');
-            
-            if (isExpanded) {
-                // Collapse - show only 2 lines
-                card.classList.remove('expanded');
-                preview.classList.remove('expanded');
-                buttonText.textContent = 'More';
-            } else {
-                // Expand - show full content
-                card.classList.add('expanded');
-                preview.classList.add('expanded');
-                buttonText.textContent = 'Show Less';
-            }
-        }
-
-        // Add smooth scrolling and enhanced interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.achievement-card');
-            
-            // Add intersection observer for animation on scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry, index) => {
-                    if (entry.isIntersecting) {
-                        setTimeout(() => {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            cards.forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
 </body>
 </html>
