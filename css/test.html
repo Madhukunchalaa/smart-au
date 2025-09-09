@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Section Layout</title>
+    <title>Achievements Section</title>
     <style>
         * {
             margin: 0;
@@ -12,46 +12,69 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 2rem 0;
         }
 
-        .container {
-            max-width: 1200px;
+        .achievements-section {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 2rem;
         }
 
-        .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
         }
 
-        /* About Section */
-        .section-about {
-            padding-top: 4.28rem;
-        }
-
-        #about-us {
-            margin-top: 7rem;
-        }
-
-        @media (max-width: 991.98px) {
-            .section-about {
-                padding-top: 10rem;
-            }
-        }
-
-        .section-about .title-h2 {
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            margin-bottom: 1.3rem;
-            font-size: 2.5rem;
-            color: #333;
-            font-weight: 700;
         }
 
+        .highlight {
+            color: #7ed321;
+            font-weight: 600;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid rgba(126, 211, 33, 0.2);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
         .section-about .after-title {
             font-size: 1.57rem;
             line-height: 1.5;
@@ -452,5 +475,147 @@
             </div>
         </div>
     </section>
+
+<section class="section section-services">
+  <div class="container">
+    <p class="before-title text-center">Services that we provide</p>
+    <h2 class="title-h2 text-center">Solutions That Define Tomorrow</h2>
+    <p class="text-center after-title">Every great digital transformation begins with understanding not just what you need today, but what you'll need to dominate tomorrow. Our comprehensive suite of services combines strategic vision with technical mastery to deliver solutions that don't just meet expectations—they shatter them.</p>
+
+    <div class="row-services">
+
+      <!-- Card 1 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service1.png" alt="">
+                <h2 class="title-h3">Custom Web Development</h2>
+                <h6 class="title-h5">Transform Your Digital Presence</h6>
+                <p class="description">We engineer bespoke web solutions that become the cornerstone of your digital strategy. From high-performance corporate websites to complex web applications, every line of code is crafted with precision and purpose.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Custom Web Development</h2>
+              <p>Our web development expertise includes:</p>
+              <ul>
+                <li>Responsive Design</li>
+                <li>E-commerce Solutions</li>
+                <li>Progressive Web Apps</li>
+                <li>Custom CMS Development</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service2.png" alt="">
+                <h2 class="title-h3">Enterprise Applications</h2>
+                <h6 class="title-h5">Complex Challenges, Sophisticated Solutions</h6>
+                <p class="description">Enterprise success demands technology that can handle complexity while remaining elegant in execution. We build enterprise-grade systems that streamline operations, enhance productivity, and accelerate growth.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Enterprise Applications</h2>
+              <p>Our enterprise solutions include:</p>
+              <ul>
+                <li>ERP Systems</li>
+                <li>CRM Solutions</li>
+                <li>Business Intelligence Tools</li>
+                <li>Workflow Automation</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service3.png" alt="">
+                <h2 class="title-h3">Digital Transformation</h2>
+                <h6 class="title-h5">Navigate Tomorrow with Confidence</h6>
+                <p class="description">Digital transformation isn't just about adopting new technology—it's about fundamentally reimagining how your business operates in the digital age. We guide organizations through comprehensive transformation journeys.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Digital Transformation</h2>
+              <p>Our transformation services include:</p>
+              <ul>
+                <li>Digital Strategy Development</li>
+                <li>Process Optimization</li>
+                <li>Legacy System Modernization</li>
+                <li>Cloud Migration</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-services col-lg-6">
+        <div class="card-flip">
+          <div class="card-flip-inner">
+            <div class="card-front">
+              <div class="card-inner">
+                <img src="img/service4.png" alt="">
+                <h2 class="title-h3">Innovation Consulting</h2>
+                <h6 class="title-h5">Unlock Untapped Potential</h6>
+                <p class="description">Sometimes the most powerful solutions aren't obvious. Our innovation consulting unlocks possibilities you never knew existed, positioning your business at the forefront of industry evolution.</p>
+                <a href="#" class="btn-text flip-btn">Read More</a>
+              </div>
+            </div>
+            <div class="card-back">
+              <h2 class="title-h3">Innovation Consulting</h2>
+              <p>Our innovation services include:</p>
+              <ul>
+                <li>Technology Assessment</li>
+                <li>Innovation Workshops</li>
+                <li>Proof of Concept Development</li>
+                <li>Technology Roadmapping</li>
+              </ul>
+              <a href="#" class="btn-text back-btn">Go Back</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Handle flip for all cards
+  document.querySelectorAll(".flip-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      btn.closest(".card-flip").classList.add("flip");
+    });
+  });
+
+  document.querySelectorAll(".back-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      e.preventDefault();
+      btn.closest(".card-flip").classList.remove("flip");
+    });
+  });
+</script>
+
 </body>
 </html>
