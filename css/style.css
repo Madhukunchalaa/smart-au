@@ -4775,3 +4775,225 @@ margin-top: 7rem;
   align-items: center;
   justify-content: end;
 }
+
+
+ .circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db; /* normal base color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden; /* hide pseudo-element edges */
+  cursor: pointer;
+}
+
+/* The animated overlay */
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e74c3c 0%, #e74c3c 100%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0; /* stay behind text */
+}
+
+/* On hover: grow the colored circle */
+.circle:hover::before {
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* keep text above the animation */
+.circle > * {
+  position: relative;
+  z-index: 1;
+}
+    .slidess{
+     background-image: url(https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Fun-Fact.jpg);
+      padding: 50px 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .hm-wpc-slider-section {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .slider-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    
+    #hm-wpc-slider-wrapper {
+      display: grid;
+      grid-template-columns: repeat(8, 300px);
+      gap: 0;
+      transition: transform 0.8s ease;
+      width: 2400px;
+    }
+    
+    .hm-wpc-slider-slide {
+      width: 300px;
+    }
+    
+    .full {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .box {
+      height: 350px;
+      width: 290px;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
+      position: relative;
+      margin-top: -50px;
+      background-color: #222222;
+      background-image: linear-gradient(to top, white 100%, white 100%);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: 100% 0%;
+      transition: background-size 0.3s ease-in-out;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .box-text{
+      padding: 30px;
+      text-align: center;
+      margin-top: 70px;
+    }
+
+    .box-text h1{
+      font-family: 'Nova Flat';
+      font-size: 1.42rem;
+      font-weight: 600;
+    }
+    .box-text p{
+      font-size: 1.21rem;
+      color: #cccccc;
+    }
+    .box:hover {
+      background-size: 100% 100%;
+      color: black;
+    }
+
+    .round {
+      height: 100px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      z-index: 2;
+      background-color: #222222;
+      color: white;
+      font-size: 30px;
+      
+    }
+    .round::before{
+      transform: scale(0);
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+  background-color: #222222;
+    }
+    
+    .round img{
+      width: 40px;
+      height: 40px;
+    }
+
+    .box:hover ~ .round {
+      background-color: #1c0c94;
+      transform: scaleX(1);
+      transition: all 300ms linear;
+      
+    }
+    
+    /* Dots/Indicators Styling */
+    .hm-wpc-slider-indicators {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+    
+    .hm-wpc-slider-dot {
+      width: 12px;
+      height: 12px;
+      display: none;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .hm-wpc-slider-dot.hm-wpc-slider-active {
+      background-color: white;
+    }
+    
+    .hm-wpc-slider-dot:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .round {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #222222; /* default colour */
+  color: white;
+  font-size: 30px;
+  overflow: hidden; /* hide pseudo-element overflow */
+}
+
+/* Growing coloured circle underlay */
+.round::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: #1c0c94; /* hover colour */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+  z-index: 0; /* under icon/image */
+}
+
+/* Hover on box triggers round animation */
+.full:hover .round::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Keep the image above the pseudo-element */
+.round img,
+.round span {
+  position: relative;
+  z-index: 1;
+}
