@@ -10,9 +10,54 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Nova+Flat&display=swap" rel="stylesheet">
   <style>
+    .circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #3498db; /* normal base color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden; /* hide pseudo-element edges */
+  cursor: pointer;
+}
+
+/* The animated overlay */
+.circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e74c3c 0%, #e74c3c 100%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0; /* stay behind text */
+}
+
+/* On hover: grow the colored circle */
+.circle:hover::before {
+  width: 200%;
+  height: 200%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* keep text above the animation */
+.circle > * {
+  position: relative;
+  z-index: 1;
+}
     .slidess{
-      background-color: orange;
+     background-image: url(https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Fun-Fact.jpg);
       padding: 50px 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
     
     .hm-wpc-slider-section {
@@ -32,7 +77,7 @@
       display: grid;
       grid-template-columns: repeat(8, 300px);
       gap: 0;
-      transition: transform 0.5s ease;
+      transition: transform 0.8s ease;
       width: 2400px;
     }
     
@@ -144,139 +189,53 @@
     .hm-wpc-slider-dot:hover {
       background-color: rgba(255, 255, 255, 0.8);
     }
+
+    .round {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #222222; /* default colour */
+  color: white;
+  font-size: 30px;
+  overflow: hidden; /* hide pseudo-element overflow */
+}
+
+/* Growing coloured circle underlay */
+.round::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background-color: #1c0c94; /* hover colour */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease-out;
+  z-index: 0; /* under icon/image */
+}
+
+/* Hover on box triggers round animation */
+.full:hover .round::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Keep the image above the pseudo-element */
+.round img,
+.round span {
+  position: relative;
+  z-index: 1;
+}
+
   </style>
 </head>
 <body>
-  <section class="slidess">
-    <div class="hm-wpc-slider-section">
-      <div class="slider-container">
-        <div id="hm-wpc-slider-wrapper">
-          
-          <!-- Slide 1 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Custom Web Development</h1>
-                  <p>Transform your digital presence with bespoke solutions engineered for performance, scalability, and user engagement that converts.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service1.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Enterprise Applications</h1>
-                  <p>Complex challenges demand sophisticated solutions. We build enterprise-grade systems that streamline operations and accelerate growth.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service2.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Digital Transformation</h1>
-                  <p>Navigate the digital landscape with confidence. Our comprehensive transformation strategies position your business for sustained success.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service3.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 4 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Innovation Consulting</h1>
-                  <p>Unlock untapped potential with strategic guidance from industry veterans who've shaped the digital evolution of countless businesses.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service2.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 5 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Custom Web Development</h1>
-                  <p>Transform your digital presence with bespoke solutions engineered for performance, scalability, and user engagement that converts.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service1.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 6 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Enterprise Applications</h1>
-                  <p>Complex challenges demand sophisticated solutions. We build enterprise-grade systems that streamline operations and accelerate growth.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service2.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 7 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Digital Transformation</h1>
-                  <p>Navigate the digital landscape with confidence. Our comprehensive transformation strategies position your business for sustained success.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service3.png" alt="">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 8 -->
-          <div class="hm-wpc-slider-slide">
-            <div class="full">
-              <div class="box">
-                <div class="box-text">
-                  <h1>Innovation Consulting</h1>
-                  <p>Unlock untapped potential with strategic guidance from industry veterans who've shaped the digital evolution of countless businesses.</p>
-                </div>
-              </div>
-              <div class="round">
-                <img src="img/service2.png" alt="">
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-      <div class="hm-wpc-slider-indicators"></div>
-    </div>
-  </section>
+ 
+ 
 
   <script>
     class HmWpcSlider {
