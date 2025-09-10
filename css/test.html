@@ -1,621 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Achievements Section</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webtec Services Carousel</title>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            color: white;
-            min-height: 100vh;
-            padding: 2rem 0;
-        }
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-        .achievements-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #2c3e50;
+      color: #fff;
+      min-height: 100vh;
+    }
 
-        .section-title {
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
+    .services-section {
+      padding: 60px 20px 80px;
+      text-align: center;
+      background: #2c3e50;
+    }
 
-        .highlight {
-            color: #7ed321;
-            font-weight: 600;
-        }
+    .services-section h2 {
+      font-size: 48px;
+      margin-bottom: 60px;
+      color: #fff;
+      font-weight: 700;
+      line-height: 1.2;
+    }
 
-        .achievements-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .achievement-card {
-            background: rgba(30, 30, 30, 0.8);
-            border: 1px solid rgba(126, 211, 33, 0.2);
-            border-radius: 16px;
-            padding: 2.5rem;
-            position: relative;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-    .card-front,
-    .card-back {
-      position: absolute;
+    /* Swiper container */
+    .swiper {
       width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      background: #fff;
-      padding: 20px;
+      max-width: 1400px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .swiper-slide {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Default Card (Dark) */
+    .service-card {
+      position: relative;
+      background: #34495e;
+      border-radius: 8px;
+      padding: 40px 30px 30px;
+      text-align: center;
+      width: 300px;
+      height: 320px;
+      transition: all 0.4s ease-in-out;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Icon circle */
+    .icon-circle {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #34495e;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 24px;
+      transition: all 0.4s ease-in-out;
+      border: 3px solid #2c3e50;
     }
-        .section-about .after-title {
-            font-size: 1.57rem;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-        }
 
-        .section-about .description {
-            font-size: 1.21rem;
-            line-height: 1.8;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
+    .service-card h3 {
+      font-size: 20px;
+      margin: 40px 0 25px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #fff;
+    }
 
-        .section-about .text-description {
-            font-size: 1.21rem;
-            line-height: 1.8;
-            margin-bottom: 1.4rem;
-            color: #666;
-        }
+    .service-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: left;
+    }
 
-        .before-title {
-            text-transform: uppercase;
-            color: #ff7062;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
+    .service-card ul li {
+      font-size: 14px;
+      margin: 10px 0;
+      color: #bdc3c7;
+      position: relative;
+      padding-left: 15px;
+      line-height: 1.4;
+    }
 
-        /* Image Layout */
-        .col-xl-7 {
-            flex: 0 0 58.33%;
-            max-width: 58.33%;
-        }
+    .service-card ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #95a5a6;
+      font-weight: bold;
+    }
 
-        .col-xl-5 {
-            flex: 0 0 41.67%;
-            max-width: 41.67%;
-            padding-left: 2rem;
-        }
+    /* ACTIVE CARD (White/Light) */
+    .swiper-slide-active .service-card {
+      background: #fff;
+      color: #2c3e50;
+      transform: scale(1.05);
+    }
 
-        .img-about {
-            display: flex;
-            justify-content: flex-end;
-            position: relative;
-            height: 650px;
-            width: 100%;
-        }
+    .swiper-slide-active .icon-circle {
+      background: #e74c3c;
+      color: #fff;
+      border-color: #fff;
+    }
 
-        @media (max-width: 767.98px) {
-            .img-about {
-                justify-content: flex-start;
-                margin-bottom: 2rem;
-                height: 300px;
-            }
-            #about-us {
-                margin-top: 0;
-            }
-            .col-xl-7, .col-xl-5 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-            .col-xl-5 {
-                padding-left: 0;
-                margin-top: 2rem;
-            }
-        }
+    .swiper-slide-active .service-card h3 {
+      color: #2c3e50;
+    }
 
-        .img-about-item {
-            position: absolute;
-            left: 0;
-            z-index: 1;
-        }
+    .swiper-slide-active .service-card ul li {
+      color: #7f8c8d;
+    }
 
-        @media (max-width: 991.98px) {
-            .img-about-item {
-                display: none;
-            }
-        }
+    .swiper-slide-active .service-card ul li::before {
+      color: #95a5a6;
+    }
 
-        .thumb-back {
-            width: 550px;
-            height: 635px;
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-        }
+    /* "More" button for active card */
+    .more-button {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      border: none;
+      color: #7f8c8d;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
 
-        .thumb-back-img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .thumb-front {
-            width: 229px;
-            height: 327px;
-            position: absolute;
-            top: 115px;
-            right: 105px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
-            z-index: 2;
-            border: 5px solid white;
-            transform: rotate(10deg);
-            transition-duration: 5000ms;
-        }
+    .swiper-slide-active .more-button {
+      opacity: 1;
+    }
 
-        .thumb-front:hover {
-            transform: scale(0.9);
-        }
+    .more-button::after {
+      content: '→';
+      font-size: 16px;
+    }
 
-        @media (max-width: 767.98px) {
-            .thumb-front {
-                width: 280px;
-                height: 350px;
-                position: relative;
-                top: 0;
-                transform: rotate(0deg);
-            }
-        }
+    /* Bottom CTA Section */
+    .cta-section {
+      background: #2c3e50;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #34495e;
+    }
 
-        .thumb-front {
-            position: relative;
-            overflow: hidden;
-        }
+    .cta-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-        .thumb-front::before {
-            position: absolute;
-            top: 0;
-            left: -100%;
-            display: block;
-            content: "";
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-            transform: skewX(-25deg);
-            transition: all 0.75s ease;
-            z-index: 2;
-        }
+    .cta-content h3 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
 
-        .thumb-front:hover::before {
-            left: 120%;
-        }
+    .cta-button {
+      background: #e74c3c;
+      color: #fff;
+      border: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-        .thumb-front-img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
+    .cta-button:hover {
+      background: #c0392b;
+      transform: translateY(-2px);
+    }
 
-        .box-about-text {
-            position: absolute;
-            bottom: -50px;
-            left: -98px;
-            background: rgb(227, 34, 34);
-            color: white;
-            padding: 42px 25px;
-            border-radius: 20px;
-            z-index: 4;
-            min-width: 180px;
-            text-align: center;
-        }
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .service-card {
+        width: 280px;
+        height: 300px;
+      }
+      
+      .services-section h2 {
+        font-size: 36px;
+      }
 
-        @media (max-width: 767.98px) {
-            .box-about-text {
-                bottom: 10px;
-                left: 10px;
-                padding: 20px 25px;
-                transform: rotate(0deg);
-            }
-        }
+      .swiper {
+        padding: 20px 0;
+      }
+    }
 
-        .box-about-text p {
-            margin: 0;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    @media (max-width: 480px) {
+      .service-card {
+        width: 260px;
+        height: 280px;
+        padding: 35px 25px 25px;
+      }
 
-        .box-about-text span {
-            font-size: 3.5rem;
-            font-weight: 900;
-            display: block;
-            line-height: 0.9;
-            margin-bottom: 5px;
-        }
-
-        .btn-play {
-            display: inline-block;
-            color: #ff7062;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding-bottom: 5px;
-        }
-
-        .btn-play::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #ff7062;
-            transition: width 0.3s ease;
-        }
-
-        .btn-play:hover::after {
-            width: 100%;
-        }
-
-        .btn-play:hover {
-            color: #e55a4c;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 991.98px) {
-            .col-xl-7, .col-xl-5 {
-                flex: 0 0 100%;
-                max-width: 100%;
-            }
-            
-            .img-about {
-                justify-content: center;
-                height: 400px;
-            }
-            
-            .thumb-front {
-                width: 400px;
-                height: 500px;
-            }
-        }
-
-        @media (max-width: 767.98px) {
-            .thumb-front {
-                width: 280px;
-                height: 350px;
-            }
-            
-            .box-about-text {
-                bottom: 15px;
-                left: 15px;
-                padding: 15px 20px;
-            }
-            
-            .box-about-text span {
-                font-size: 1.8rem;
-            }
-        }
-        
-        .service-box {
-            display: flex;
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-
-        .service-item {
-            text-align: center;
-            flex: 1;
-        }
-
-        .service-item img {
-            width: 60px;
-            margin-bottom: 0.8rem;
-        }
-
-        .service-item h4 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .cta-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 2rem;
-        }
-
-        .call-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1rem;
-        }
-
-        .call-info i {
-            color: #ff7062;
-            font-size: 1.5rem;
-        }
-
-        .btn-discover {
-            background: #ff7062;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-discover:hover {
-            background: #e55a4c;
-        }
-
-        @media (max-width: 768px) {
-            .service-box {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-            
-            .service-item {
-                gap: 1rem;
-            }
-            
-            .service-item .icon-wrapper {
-                width: 60px;
-                height: 60px;
-            }
-            
-            .service-item .icon-wrapper svg {
-                width: 30px;
-                height: 30px;
-            }
-            
-            .cta-box {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: flex-start;
-            }
-        }
-    </style>
+      .services-section h2 {
+        font-size: 28px;
+        line-height: 1.3;
+      }
+    }
+  </style>
 </head>
 <body>
-    <section class="section section-about" id="about-us">
-        <div class="container">
-            <div class="row justify-content-between">
-                <!-- Left Side (Image Layout) -->
-                <div class="col-xl-7 col-md-6 col-sm-12 col-12">
-                    <div class="img-about">
-                        <div class="img-about-item">
-                            <div class="thumb-back">
-                                <img class="thumb-back-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Bg-1.jpg" alt="Team Meeting">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="thumb-front wow fadeInUp" data-wow-duration="1000ms">
-                                <img class="thumb-front-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Project1-400x532.jpg" alt="Office Setup">
-                            </div>
-                        </div>
-                        <div class="box-about-text">
-                            <p><span>15+</span>Years of experience</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Right Side (Text + Content Layout) -->
-                <div class="col-xl-5 col-md-5 col-sm-12 col-12">
-                    <p class="before-title scnd">ABOUT THE COMPANY</p>
-                    <h2 class="title-h2">We provide the best IT solutions services</h2>
-                    <p class="description">IT solutions encompass a range of technologies and services designed to address specific business needs, such as network security, cloud computing, and software development.</p>
+  <section class="services-section">
+    <h2>Empower Your Business With<br>Innovative Digital Services</h2>
 
-                    <div class="service-box">
-                        <div class="service-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Development">
-                            <h4>End to End Development</h4>
-                        </div>
-                        <div class="service-item">
-                            <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Outsource">
-                            <h4>Software IT Outsource</h4>
-                        </div>
-                    </div>
-
-                    <p class="text-description">Lorem ipsum dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt ut labore et simply free text dolore</p>
-
-                    <div class="cta-box">
-                        <div class="call-info">
-                            <i class="fa fa-phone">📞</i>
-                            <p>Call us anytime<br><strong>+88 017 500 500 88</strong></p>
-                        </div>
-                        <a href="#" class="btn-discover">DISCOVER MORE</a>
-                    </div>
-                </div>
-            </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="icon-circle">🚀</div>
+            <h3>Corporate/Portfolio<br>Websites</h3>
+            <ul>
+              <li>Website Maintenance & Updates</li>
+              <li>Performance Optimization</li>
+              <li>Security Monitoring</li>
+              <li>Backup & Recovery</li>
+            </ul>
+            <button class="more-button">More</button>
+          </div>
         </div>
-    </section>
 
-<section class="section section-services">
-  <div class="container">
-    <p class="before-title text-center">Services that we provide</p>
-    <h2 class="title-h2 text-center">Solutions That Define Tomorrow</h2>
-    <p class="text-center after-title">Every great digital transformation begins with understanding not just what you need today, but what you'll need to dominate tomorrow. Our comprehensive suite of services combines strategic vision with technical mastery to deliver solutions that don't just meet expectations—they shatter them.</p>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="icon-circle">📊</div>
+            <h3>Website Maintenance<br>& Updates</h3>
+            <ul>
+              <li>Website Maintenance & Updates</li>
+              <li>Performance Optimization</li>
+              <li>Security Monitoring</li>
+              <li>Backup & Recovery</li>
+            </ul>
+            <button class="more-button">More</button>
+          </div>
+        </div>
 
-    <div class="row-services">
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="icon-circle">🎯</div>
+            <h3>Branding &<br>Creative Design</h3>
+            <ul>
+              <li>Website Maintenance & Updates</li>
+              <li>Performance Optimization</li>
+              <li>Security Monitoring</li>
+              <li>Backup & Recovery</li>
+            </ul>
+            <button class="more-button">More</button>
+          </div>
+        </div>
 
-      <!-- Card 1 -->
-      <div class="col-services col-lg-6">
-        <div class="card-flip">
-          <div class="card-flip-inner">
-            <div class="card-front">
-              <div class="card-inner">
-                <img src="img/service1.png" alt="">
-                <h2 class="title-h3">Custom Web Development</h2>
-                <h6 class="title-h5">Transform Your Digital Presence</h6>
-                <p class="description">We engineer bespoke web solutions that become the cornerstone of your digital strategy. From high-performance corporate websites to complex web applications, every line of code is crafted with precision and purpose.</p>
-                <a href="#" class="btn-text flip-btn">Read More</a>
-              </div>
-            </div>
-            <div class="card-back">
-              <h2 class="title-h3">Custom Web Development</h2>
-              <p>Our web development expertise includes:</p>
-              <ul>
-                <li>Responsive Design</li>
-                <li>E-commerce Solutions</li>
-                <li>Progressive Web Apps</li>
-                <li>Custom CMS Development</li>
-              </ul>
-              <a href="#" class="btn-text back-btn">Go Back</a>
-            </div>
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="icon-circle">📢</div>
+            <h3>Website Design<br>(UI/UX)</h3>
+            <ul>
+              <li>Website Maintenance & Updates</li>
+              <li>Performance Optimization</li>
+              <li>Security Monitoring</li>
+              <li>Backup & Recovery</li>
+            </ul>
+            <button class="more-button">More</button>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide">
+          <div class="service-card">
+            <div class="icon-circle">💻</div>
+            <h3>Custom Web<br>Development</h3>
+            <ul>
+              <li>Modern Technologies</li>
+              <li>Scalable Solutions</li>
+              <li>API Integration</li>
+              <li>24/7 Support</li>
+            </ul>
+            <button class="more-button">More</button>
           </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-services col-lg-6">
-        <div class="card-flip">
-          <div class="card-flip-inner">
-            <div class="card-front">
-              <div class="card-inner">
-                <img src="img/service2.png" alt="">
-                <h2 class="title-h3">Enterprise Applications</h2>
-                <h6 class="title-h5">Complex Challenges, Sophisticated Solutions</h6>
-                <p class="description">Enterprise success demands technology that can handle complexity while remaining elegant in execution. We build enterprise-grade systems that streamline operations, enhance productivity, and accelerate growth.</p>
-                <a href="#" class="btn-text flip-btn">Read More</a>
-              </div>
-            </div>
-            <div class="card-back">
-              <h2 class="title-h3">Enterprise Applications</h2>
-              <p>Our enterprise solutions include:</p>
-              <ul>
-                <li>ERP Systems</li>
-                <li>CRM Solutions</li>
-                <li>Business Intelligence Tools</li>
-                <li>Workflow Automation</li>
-              </ul>
-              <a href="#" class="btn-text back-btn">Go Back</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-services col-lg-6">
-        <div class="card-flip">
-          <div class="card-flip-inner">
-            <div class="card-front">
-              <div class="card-inner">
-                <img src="img/service3.png" alt="">
-                <h2 class="title-h3">Digital Transformation</h2>
-                <h6 class="title-h5">Navigate Tomorrow with Confidence</h6>
-                <p class="description">Digital transformation isn't just about adopting new technology—it's about fundamentally reimagining how your business operates in the digital age. We guide organizations through comprehensive transformation journeys.</p>
-                <a href="#" class="btn-text flip-btn">Read More</a>
-              </div>
-            </div>
-            <div class="card-back">
-              <h2 class="title-h3">Digital Transformation</h2>
-              <p>Our transformation services include:</p>
-              <ul>
-                <li>Digital Strategy Development</li>
-                <li>Process Optimization</li>
-                <li>Legacy System Modernization</li>
-                <li>Cloud Migration</li>
-              </ul>
-              <a href="#" class="btn-text back-btn">Go Back</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col-services col-lg-6">
-        <div class="card-flip">
-          <div class="card-flip-inner">
-            <div class="card-front">
-              <div class="card-inner">
-                <img src="img/service4.png" alt="">
-                <h2 class="title-h3">Innovation Consulting</h2>
-                <h6 class="title-h5">Unlock Untapped Potential</h6>
-                <p class="description">Sometimes the most powerful solutions aren't obvious. Our innovation consulting unlocks possibilities you never knew existed, positioning your business at the forefront of industry evolution.</p>
-                <a href="#" class="btn-text flip-btn">Read More</a>
-              </div>
-            </div>
-            <div class="card-back">
-              <h2 class="title-h3">Innovation Consulting</h2>
-              <p>Our innovation services include:</p>
-              <ul>
-                <li>Technology Assessment</li>
-                <li>Innovation Workshops</li>
-                <li>Proof of Concept Development</li>
-                <li>Technology Roadmapping</li>
-              </ul>
-              <a href="#" class="btn-text back-btn">Go Back</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  // Handle flip for all cards
-  document.querySelectorAll(".flip-btn").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.preventDefault();
-      btn.closest(".card-flip").classList.add("flip");
-    });
-  });
+  <section class="cta-section">
+    <div class="cta-content">
+      <h3>Let's Discuss a Schedule For Free Consultation</h3>
+      <button class="cta-button">Get In Touch</button>
+    </div>
+  </section>
 
-  document.querySelectorAll(".back-btn").forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.preventDefault();
-      btn.closest(".card-flip").classList.remove("flip");
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      
+      // Responsive breakpoints
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        }
+      }
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
