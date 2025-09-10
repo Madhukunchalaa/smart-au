@@ -17,6 +17,7 @@
     <link href="css/animate.css" rel="stylesheet">
     <!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
 	<!-- Font Awesome -->
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 
@@ -225,12 +226,12 @@
 
         <div class="service-box">
           <div class="service-item">
-            <p><img src="img/team.png" alt="">
+            <p><img src="img/blue-team.jpg" alt="">
             </p>
             <h4>End to end development</h4>
           </div>
           <div class="service-item">
-            <p><img src="img/software-source.png" alt="">
+            <p><img src="img/blue-source.jpg" alt="">
             </p>
            
             <h4>Software IT Outsource</h4>
@@ -337,6 +338,9 @@
             </div>
         </div>
     </section> -->
+
+
+
  <section class="slidess">
     <p class="before-title scnd text-center">ABOUT THE COMPANY</p>
         <h2 class="title-h2 text-center">We provide the best IT solutions services</h2>
@@ -469,6 +473,7 @@
       <div class="hm-wpc-slider-indicators"></div>
     </div>
   </section>
+
     <!-- Cases -->
     <section class="section section-case">
         <div class="container">
@@ -1077,6 +1082,106 @@
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/wow.min.js"></script>
 	<script src="js/plugins.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        class HmWpcSlider {
+        constructor() {
+            this.wrapper = document.getElementById('hm-wpc-slider-wrapper');
+            this.indicatorContainer = document.querySelector('.hm-wpc-slider-indicators');
+            this.slides = document.querySelectorAll('.hm-wpc-slider-slide');
+            this.currentSlide = 0;
+            this.totalSlides = this.slides.length;
+            this.autoSlideInterval = 3000;
+            this.intervalId = null;
+            this.dots = [];
+            this.slideWidth = 300; 
+            this.visibleSlides = 4; 
+
+            this.init();
+        }
+
+        init() {
+            this.createDots();
+            this.startAutoSlide();
+
+            const section = document.querySelector('.hm-wpc-slider-section');
+            section.addEventListener('mouseenter', () => this.stopAutoSlide());
+            section.addEventListener('mouseleave', () => this.startAutoSlide());
+        }
+
+        getVisibleSlides() {
+            return this.visibleSlides;
+        }
+
+        getPageCount() {
+            return this.totalSlides - this.visibleSlides + 1;
+        }
+
+        createDots() {
+            this.indicatorContainer.innerHTML = '';
+            this.dots = [];
+
+            const pageCount = this.getPageCount();
+
+            for (let i = 0; i < pageCount; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('hm-wpc-slider-dot');
+                if (i === this.currentSlide) dot.classList.add('hm-wpc-slider-active');
+                dot.dataset.slide = i;
+
+                dot.addEventListener('click', () => {
+                    this.goToSlide(i);
+                    this.resetAutoSlide();
+                });
+
+                this.indicatorContainer.appendChild(dot);
+                this.dots.push(dot);
+            }
+        }
+
+        goToSlide(slideIndex) {
+            const maxSlide = this.getPageCount() - 1;
+            this.currentSlide = Math.max(0, Math.min(slideIndex, maxSlide));
+
+            const translateX = -(this.currentSlide * this.slideWidth);
+            this.wrapper.style.transform = `translateX(${translateX}px)`;
+            this.wrapper.style.transition = "transform 0.5s ease";
+
+            this.dots.forEach((dot, index) => {
+                dot.classList.toggle('hm-wpc-slider-active', index === this.currentSlide);
+            });
+        }
+
+        nextSlide() {
+            const maxSlide = this.getPageCount() - 1;
+            const nextIndex = this.currentSlide >= maxSlide ? 0 : this.currentSlide + 1;
+            this.goToSlide(nextIndex);
+        }
+
+        startAutoSlide() {
+            this.intervalId = setInterval(() => {
+                this.nextSlide();
+            }, this.autoSlideInterval);
+        }
+
+        stopAutoSlide() {
+            if (this.intervalId) {
+                clearInterval(this.intervalId);
+                this.intervalId = null;
+            }
+        }
+
+        resetAutoSlide() {
+            this.stopAutoSlide();
+            this.startAutoSlide();
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        new HmWpcSlider();
+    });
+    </script>
 </body>
 
 </html>
