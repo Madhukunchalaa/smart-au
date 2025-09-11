@@ -1627,6 +1627,7 @@ margin-top: 7rem;
 /* Cases */
 .section-case {
   position: relative;
+  padding-top: 3rem;
   padding-bottom: 2.5rem;
   }
 
@@ -5024,3 +5025,259 @@ margin-top: 7rem;
   transform: scaleX(1.1); /* stretch horizontally */
 }
 }
+
+
+
+/* service section */
+.services-section {
+    background: linear-gradient(rgba(47, 30, 77, 0.7), rgba(47, 30, 77, 0.7)), 
+                url(https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Project2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0px 0px 0px;
+    color: white;
+}
+.first-row{
+  margin-bottom: -100px!important;
+}
+
+        
+        .section-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .section-descriptions {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+       .discover-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #1c0c94;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .discover-btn:hover {
+            background: #000;
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .discover-btn i {
+            padding: 5px 9px;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background-color: white; 
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .discover-btn:hover i {
+            background-color: #1c0c94; 
+            color: #fff; 
+        }
+
+        
+        .service-card {
+            background-image:url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/icon-lines-6.png);
+            background-position: center;
+            background-size: cover;
+            background-color: hsl(0deg 0% 99.84%);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: none;
+            height: 80%;
+            margin-bottom: 30px;
+        }
+        .services-section {
+            counter-reset: my-sec-counter;
+        }
+
+        .service-card::after {
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter, decimal-leading-zero);
+            position: absolute;
+            line-height: 1;
+            right: 20px;
+            top: 50px;
+            font-size: 48px;
+            color: #f4f5f9;
+            transition: all 500ms ease;
+            z-index: 1;
+        }
+
+        
+        .service-card::before {
+          content: '';
+          position: absolute;
+          bottom: -100%;  /* start fully below the card */
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #1c0c94;
+          background-image: url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/pattern-shape-1.png);
+          background-position: center;
+          background-size: cover;
+          transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 1;
+        }
+
+        /* on hover, slide up into view */
+        .service-card:hover::before {
+          bottom: 0;
+        }
+        
+        .service-card.featured {
+            background: linear-gradient(135deg, #1c0c94, #ff3742);
+            color: white;
+        }
+        
+        .service-card.featured::before {
+            display: none;
+        }
+        
+        .card-content {
+           text-align: left;
+            position: relative;
+            z-index: 2;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .card-content {
+            color: white;
+        }
+        
+        .service-card.featured .card-content {
+            color: white;
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: #1c0c94;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-icon img{
+            width: 40px;
+            height: 40px;
+        }
+        
+        .service-card:hover .service-icon {
+            border-radius: 50%;
+            background: #9480e1;
+            transform: scale(1.1);
+        }
+        
+        .service-card.featured .service-icon {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .service-card.featured:hover .service-icon {
+            background: white;
+        }
+        
+        .service-icon svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon svg {
+            fill: #ffff;
+        }
+        
+        .service-card.featured .service-icon svg {
+            fill: white;
+        }
+        
+        .service-card.featured:hover .service-icon svg {
+            fill: #1c0c94;
+        }
+        
+        .service-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .service-card:hover .service-title {
+            color: white;
+        }
+        
+        .service-card.featured .service-title {
+            color: white;
+        }
+        
+        .service-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        .service-card:hover .service-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .service-card.featured .service-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Custom responsive adjustments */
+        @media (max-width: 991px) {
+            .section-title {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .service-card {
+                padding: 30px 20px;
+            }
+        }
