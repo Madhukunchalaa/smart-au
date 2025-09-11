@@ -122,6 +122,7 @@
 
         
         .service-card::before {
+<<<<<<< HEAD
             content: '';
             position: absolute;
             top: 0;
@@ -138,6 +139,25 @@
         
         .service-card:hover::before {
             left: 0;
+=======
+          content: '';
+          position: absolute;
+          bottom: -100%;  /* start fully below the card */
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #1c0c94;
+          background-image: url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/pattern-shape-1.png);
+          background-position: center;
+          background-size: cover;
+          transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          z-index: 1;
+        }
+
+        /* on hover, slide up into view */
+        .service-card:hover::before {
+          bottom: 0;
+>>>>>>> ec68fd3abb6aa8b6aebe91d39219e36b7a7e05c6
         }
         
         .service-card.featured {
@@ -264,6 +284,10 @@
             }
         }
         
+<<<<<<< HEAD
+=======
+        
+>>>>>>> ec68fd3abb6aa8b6aebe91d39219e36b7a7e05c6
     </style>
 </head>
 <body>
