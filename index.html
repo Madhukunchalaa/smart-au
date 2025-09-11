@@ -29,6 +29,7 @@
     crossorigin="anonymous" 
     referrerpolicy="no-referrer" 
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script src="https://kit.fontawesome.com/2097aac339.js" crossorigin="anonymous"></script>
 	<!-- Owl Carousel -->
@@ -199,7 +200,7 @@
   <div class="container">
     <div class="row justify-content-between">
       <!-- Left Side (Image Layout) -->
-      <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-7 col-md-6 col-sm-12 col-12">
         <div class="img-about">
           <div class="img-about-item">
             <div class="thumb-back">
@@ -211,18 +212,19 @@
               <img class="thumb-front-img" src="https://dev253.kodesolution.com/webtec/wp-content/uploads/2025/07/Project1-400x532.jpg" alt="Office Setup">
             </div>
           </div>
-          <div class="box-about-text">
-            <p><span>15+</span>Years of experience</p>
+          <div class="box-about-text" data-aos="fade-up" data-aos-duration="3000"
+     data-aos-anchor-placement="bottom-bottom">
+            <p class="under-line"><span>15+</span>Years of experience</p>
           </div>
         </div>
 
       </div>
 
       <!-- Right Side (Text + Content Layout Like Image Style) -->
-      <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+      <div class="col-xl-5 col-md-6 col-sm-12 col-12">
         <p class="before-title scnd">ABOUT THE COMPANY</p>
-        <h2 class="title-h2">We provide the best IT solutions services</h2>
-        <p class="description">IT solutions encompass a range of technologies and services designed to address specific business needs, such as network security, cloud computing, and software development.</p>
+        <h2 class="title-h2" data-aos="fade-left">We provide the best IT solutions services</h2>
+        <p class="description" data-aos="fade-left">IT solutions encompass a range of technologies and services designed to address specific business needs, such as network security, cloud computing, and software development.</p>
 
         <div class="service-box">
           <div class="service-item">
@@ -238,7 +240,12 @@
           </div>
         </div>
 
-        <p class="description">We focus on your growth by ensuring technology empowers, not hinders your business success.</p>
+        <p class="description">We focus on your growth by ensuring technology empowers, not hinders your business success.
+          We focus on your growth by ensuring technology 
+        
+        
+        </p>
+
     
         <div class="cta-box">
           <div class="call-info">
@@ -1182,6 +1189,10 @@
         new HmWpcSlider();
     });
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
 </body>
 
 </html>
