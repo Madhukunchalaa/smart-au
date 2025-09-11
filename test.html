@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webtec Services Section</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -48,12 +49,12 @@
             margin-bottom: 30px;
         }
         
-        .discover-btn {
+       .discover-btn {
             display: inline-flex;
             align-items: center;
-            background: #ff4757;
+            background: #1c0c94;
             color: white;
-            padding: 15px 30px;
+            padding: 8px 10px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -61,28 +62,37 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
         }
-        
+
         .discover-btn:hover {
-            background: #ff3742;
+            background: #000;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.4);
             color: white;
             text-decoration: none;
         }
-        
-        .discover-btn::before {
-            content: "→";
+
+        .discover-btn i {
+            padding: 5px 9px;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 50%;
             margin-right: 10px;
-            font-size: 16px;
+            background-color: white; 
+            color: #333;
+            transition: all 0.3s ease;
         }
+
+        .discover-btn:hover i {
+            background-color: #1c0c94; 
+            color: #fff; 
+        }
+
         
         .service-card {
             background-image:url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/icon-lines-6.png);
             background-position: center;
             background-size: cover;
-            background-color: hsl(0, 0%, 90%);
+            background-color: hsl(0deg 0% 99.84%);
             padding: 40px 30px;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,22 +100,26 @@
             overflow: hidden;
             cursor: pointer;
             box-shadow: none;
-            height: 100%;
+            height: 88%;
             margin-bottom: 30px;
         }
-
-        .service-card::after{
-              counter-increment: my-sec-counter;
-              content: counter(my-sec-counter, decimal-leading-zero) " ";
-              position: absolute;
-              line-height: 1;
-              right: 20px;
-              top: 50px;
-              font-size: 48px;
-              color: #f4f5f9;
-              transition: all 500ms ease;
-              z-index: 1;
+        .services-section {
+            counter-reset: my-sec-counter;
         }
+
+        .service-card::after {
+            counter-increment: my-sec-counter;
+            content: counter(my-sec-counter, decimal-leading-zero);
+            position: absolute;
+            line-height: 1;
+            right: 20px;
+            top: 50px;
+            font-size: 48px;
+            color: #f4f5f9;
+            transition: all 500ms ease;
+            z-index: 1;
+        }
+
         
         .service-card::before {
             content: '';
@@ -114,7 +128,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background-color: #ff4757;
+            background-color: #1c0c94;
             background-image: url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/pattern-shape-1.png);
             background-position: center;
             background-size: cover;
@@ -127,7 +141,7 @@
         }
         
         .service-card.featured {
-            background: linear-gradient(135deg, #ff4757, #ff3742);
+            background: linear-gradient(135deg, #1c0c94, #ff3742);
             color: white;
         }
         
@@ -153,7 +167,7 @@
         .service-icon {
             width: 80px;
             height: 80px;
-            background: #ff4757;
+            background: #1c0c94;
             border-radius: 0;
             display: flex;
             align-items: center;
@@ -163,10 +177,15 @@
             position: relative;
             overflow: hidden;
         }
+
+        .service-icon img{
+            width: 40px;
+            height: 40px;
+        }
         
         .service-card:hover .service-icon {
             border-radius: 50%;
-            background: rgb(219, 73, 73);
+            background: #9480e1;
             transform: scale(1.1);
         }
         
@@ -194,7 +213,7 @@
         }
         
         .service-card.featured:hover .service-icon svg {
-            fill: #ff4757;
+            fill: #1c0c94;
         }
         
         .service-title {
@@ -244,6 +263,7 @@
                 padding: 30px 20px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -258,7 +278,7 @@
                         There are many variations of passages of available but variations of simply free
                         text passages of available but the majority
                     </p>
-                    <a href="#" class="discover-btn">Discover More</a>
+                    <a href="#" class="discover-btn"><i class="bi bi-chevron-right"></i>Discover More</a>
                 </div>
                 
                 <!-- Right Column - First Row Cards (2 cards) -->
@@ -268,12 +288,10 @@
                             <div class="service-card">
                                 <div class="card-content">
                                     <div class="service-icon">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9H9V9h10v2zm-4 4H9v-2h6v2zm4-8H9V5h10v2z"/>
-                                        </svg>
+                                        <img src="img/service1.png" alt="">
                                     </div>
-                                    <h3 class="service-title">Managed<br>Services</h3>
-                                    <p class="service-description">Exploring the Many Variations of Available Passages.</p>
+                                    <h3 class="service-title">Custom Web Development</h3>
+                                    <p class="service-description">Transform your digital presence with bespoke solutions engineered for performance, scalability, and user engagement that converts.</p>
                                 </div>
                             </div>
                         </div>
@@ -282,12 +300,10 @@
                             <div class="service-card">
                                 <div class="card-content">
                                     <div class="service-icon">
-                                        <svg viewBox="0 0 24 24">
-                                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5-5-5 5h3v4h4v-4h3z"/>
-                                        </svg>
+                                        <img src="img/service2.png" alt="">
                                     </div>
-                                    <h3 class="service-title">Cloud<br>Computing</h3>
-                                    <p class="service-description">Exploring the Many Variations of Available Passages.</p>
+                                    <h3 class="service-title">Enterprise Applications</h3>
+                                    <p class="service-description">Complex challenges demand sophisticated solutions. We build enterprise-grade systems that streamline operations and accelerate growth.</p>
                                 </div>
                             </div>
                         </div>
@@ -301,12 +317,10 @@
                     <div class="service-card">
                         <div class="card-content">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/>
-                                </svg>
+                                <img src="img/service3.png" alt="">
                             </div>
-                            <h3 class="service-title">Digital<br>Marketing</h3>
-                            <p class="service-description">Exploring the Many Variations of Available Passages.</p>
+                            <h3 class="service-title">Digital Transformation</h3>
+                            <p class="service-description">Navigate the digital landscape with confidence. Our comprehensive transformation strategies position your business for sustained success.</p>
                         </div>
                     </div>
                 </div>
@@ -315,12 +329,10 @@
                     <div class="service-card">
                         <div class="card-content">
                             <div class="service-icon">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                                </svg>
+                                <img src="img/service4.png" alt="">
                             </div>
-                            <h3 class="service-title">App<br>Integration</h3>
-                            <p class="service-description">Exploring the Many Variations of Available Passages.</p>
+                            <h3 class="service-title">Innovation Consulting</h3>
+                            <p class="service-description">Unlock untapped potential with strategic guidance from industry veterans who've shaped the digital evolution of countless businesses.</p>
                         </div>
                     </div>
                 </div>
