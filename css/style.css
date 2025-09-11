@@ -5106,7 +5106,7 @@ margin-top: 7rem;
 
         
         .service-card {
-            background-image:url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/icon-lines-6.png);
+            
             background-position: center;
             background-size: cover;
             background-color: hsl(0deg 0% 99.84%);
@@ -5120,23 +5120,7 @@ margin-top: 7rem;
             height: 80%;
             margin-bottom: 30px;
         }
-        .services-section {
-            counter-reset: my-sec-counter;
-        }
-
-        .service-card::after {
-            counter-increment: my-sec-counter;
-            content: counter(my-sec-counter, decimal-leading-zero);
-            position: absolute;
-            line-height: 1;
-            right: 20px;
-            top: 50px;
-            font-size: 48px;
-            color: #f4f5f9;
-            transition: all 500ms ease;
-            z-index: 1;
-        }
-
+       
         
         .service-card::before {
           content: '';
@@ -5146,7 +5130,7 @@ margin-top: 7rem;
           width: 100%;
           height: 100%;
           background-color: #1c0c94;
-          background-image: url(https://dev253.kodesolution.com/webtec/wp-content/plugins/mascot-core-webtec/assets/images/current-theme/pattern-shape-1.png);
+
           background-position: center;
           background-size: cover;
           transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -5157,6 +5141,26 @@ margin-top: 7rem;
         .service-card:hover::before {
           bottom: 0;
         }
+    
+
+/* different images per card */
+
+
+.service-card:nth-child(1)::before {
+  background-image: url("../img/service-1.jpg");
+}
+
+.service-card:nth-child(2)::before {
+  background-image: url("../img/service-2.jpg");
+}
+
+.service-card:nth-child(3)::before {
+  background-image: url("../img/service-3.jpg");
+}
+
+.service-card:nth-child(4)::before {
+  background-image: url("../img/service-4.jpg");
+}
         
         .service-card.featured {
             background: linear-gradient(135deg, #1c0c94, #ff3742);
@@ -5281,3 +5285,22 @@ margin-top: 7rem;
                 padding: 30px 20px;
             }
         }
+.title-h2 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+   margin-right: .25em
+}
+
+/* AOS will handle the actual animation,
+   but you can also define your own keyframes if not using AOS */
+@keyframes fadeLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* curser smoke effect */
+
